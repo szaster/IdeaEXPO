@@ -1,4 +1,4 @@
-# IdeaEXPO 
+# IdeaEXPO
 
 ## Live Site
 
@@ -12,13 +12,13 @@ The user will be able to post, edit, and read business ideas and have the choice
 
 ## Table of Contents
 
-  - [License](#license)
+- [IdeaEXPO](#ideaexpo)
   - [Live Site](#live-site)
   - [Description](#description)
   - [GIF/Image](#gifimage)
   - [Table of Contents](#table-of-contents)
   - [Installation](#installation)
-  - [Tech Stash](#tech-stash)
+  - [Tech Stack](#tech-stack)
   - [Usage](#usage)
   - [Collaborators](#collaborators)
   - [Future-Development](#future-development)
@@ -30,8 +30,6 @@ The user will be able to post, edit, and read business ideas and have the choice
 ## Installation
 
 ## Tech Stack
-
-Front-end framework [Materialize](https://materializecss.com/) for fast and successful design.
 
 Front-end framework [Bootstrap](https://getbootstrap.com/) to quickly design and customize responsive mobile-first sites.
 
