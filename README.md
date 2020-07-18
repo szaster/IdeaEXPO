@@ -12,16 +12,32 @@ The user will be able to post, edit, and read business ideas and have the choice
 
 ## Table of Contents
 
-- [Installation](#Installation)
-- [Usage](#Usage)
-- [Collaborators](#Collaborators)
-- [Future-Development](#Future-Development)
-- [Credits](#Credits)
-- [License](#License)
-- [Tests](#Tests)
-- [Questions](#Questions)
+- [IdeaEXPO ![License](https://shields.io/)](#ideaexpo-img-srchttpsimgshieldsiobadgelicense-mit-greensvg-altlicense)
+  - [Live Site](#live-site)
+  - [Description](#description)
+  - [GIF/Image](#gifimage)
+  - [Table of Contents](#table-of-contents)
+  - [Installation](#installation)
+  - [Tech Stash](#tech-stash)
+  - [Usage](#usage)
+  - [Collaborators](#collaborators)
+  - [Future-Development](#future-development)
+  - [Credits](#credits)
+  - [License](#license)
+  - [Tests](#tests)
+  - [Questions](#questions)
 
 ## Installation
+
+## Tech Stash
+
+MySQL2 NPM package [MySQL2](https://www.npmjs.com/package/mysql2) to connect to MySQL database and perform queries.
+
+Express web framework for node [Express](https://www.npmjs.com/package/express) to provide small, robust tooling for HTTP servers, making it a great solution for single page applications, web sites, hybrids, or public HTTP APIs.
+
+Handlebars.js extension [Handlebars](https://www.npmjs.com/package/handlebars) templating language that keeps the view and the code separated.
+
+Extension for VS code [Prettier - Code formatter](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode) to autoformat the code when saving.
 
 ## Usage
 
