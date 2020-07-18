@@ -41,4 +41,8 @@ License: MIT
 
 ## Questions
 
-If you have any questions our Github Links are https://github.com/Creyes17e, https://github.com/paschalihenacho, https://github.com/szaster
+If you have any questions you can reach us by clicking below.
+
+- [Carina](#https://github.com/Creyes17e)
+- [Paschal](#https://github.com/paschalihenacho)
+- [Svitlana](#https://github.com/szaster)
