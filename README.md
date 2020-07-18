@@ -1,4 +1,4 @@
-# IdeaEXPO [![License](https://img.shields.io/badge/license-MIT-green.svg)](https://shields.io/)
+# IdeaEXPO 
 
 ## Live Site
 
@@ -14,7 +14,7 @@ The user will be able to post, edit, and read business ideas and have the choice
 
 ## Table of Contents
 
-- [IdeaEXPO ![License](https://shields.io/)](#ideaexpo-img-srchttpsimgshieldsiobadgelicense-mit-greensvg-altlicense)
+  - [License](#license)
   - [Live Site](#live-site)
   - [Description](#description)
   - [GIF/Image](#gifimage)
@@ -31,7 +31,13 @@ The user will be able to post, edit, and read business ideas and have the choice
 
 ## Installation
 
-## Tech Stash
+## Tech Stack
+
+Front-end framework [Materialize] (https://materializecss.com/) for fast and successful design.
+
+Front-end framework [Bootstrap](https://getbootstrap.com/) to quickly design and customize responsive mobile-first sites.
+
+Sequelize is a promise-based Node.js ORM [Sequelize](https://www.npmjs.com/package/sequelize). It features solid transaction support, relations, eager and lazy loading, read replication and more.
 
 MySQL2 NPM package [MySQL2](https://www.npmjs.com/package/mysql2) to connect to MySQL database and perform queries.
 
