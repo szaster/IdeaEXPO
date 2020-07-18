@@ -10,6 +10,8 @@ The user will be able to post, edit, and read business ideas and have the choice
 
 ## GIF/Image
 
+## Tech Stack
+
 ## Table of Contents
 
 - [Installation](#Installation)
@@ -32,6 +34,8 @@ The user will be able to post, edit, and read business ideas and have the choice
 - [Svitlana](https://github.com/szaster)
 
 ## Future-Development
+
+The app will let you search blogs/ideas by category for example food industry, fashion, pet-care, travel, etc.…
 
 ## Credits
 
