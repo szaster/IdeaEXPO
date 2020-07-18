@@ -43,6 +43,6 @@ License: MIT
 
 If you have any questions you can reach us by clicking below.
 
-- [Carina](#https://github.com/Creyes17e)
-- [Paschal](#https://github.com/paschalihenacho)
-- [Svitlana](#https://github.com/szaster)
+- [Carina](https://github.com/Creyes17e)
+- [Paschal](https://github.com/paschalihenacho)
+- [Svitlana](https://github.com/szaster)
