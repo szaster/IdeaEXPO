@@ -10,8 +10,6 @@ The user will be able to post, edit, and read business ideas and have the choice
 
 ## GIF/Image
 
-## Tech Stack
-
 ## Table of Contents
 
   - [License](#license)
