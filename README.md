@@ -31,7 +31,7 @@ The user will be able to post, edit, and read business ideas and have the choice
 
 ## Tech Stack
 
-Front-end framework [Materialize] (https://materializecss.com/) for fast and successful design.
+Front-end framework [Materialize](https://materializecss.com/) for fast and successful design.
 
 Front-end framework [Bootstrap](https://getbootstrap.com/) to quickly design and customize responsive mobile-first sites.
 
