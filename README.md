@@ -1,4 +1,4 @@
-# IdeaEXPO
+# IdeaEXPO [![License](https://img.shields.io/badge/license-MIT-green.svg)](https://shields.io/)
 
 ## Live Site
 
