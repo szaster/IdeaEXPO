@@ -27,7 +27,9 @@ The user will be able to post, edit, and read business ideas and have the choice
 
 ## Collaborators
 
-Paschal Ihenacho, Svitlana Zaster, Carina Reyes
+- [Carina](https://github.com/Creyes17e)
+- [Paschal](https://github.com/paschalihenacho)
+- [Svitlana](https://github.com/szaster)
 
 ## Future-Development
 
