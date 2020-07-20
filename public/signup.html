@@ -3,7 +3,11 @@
   <head>
     <title>IdeaEXPO</title>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1" /> -->
+    <meta
+      name="google-signin-client_id"
+      content="600375456479-jlb7lrhulm3fjetatlcigtm62rs3lduv.apps.googleusercontent.com"
+    />
     <link
       rel="stylesheet"
       href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/lumen/bootstrap.min.css"
@@ -18,22 +22,16 @@
           <a class="navbar-brand" href="#">IdeaEXPO</a>
         </div>
         <ul class="nav navbar-nav">
-          <li class="active"><a href="#">Home</a></li>
-          <li><a href="#">About us</a></li>
+          <li class="active"><a href="#home">Home</a></li>
+          <li><a href="#about">About us</a></li>
         </ul>
         <ul class="nav navbar-nav navbar-right">
-          <!-- <li>
-            <a href="#"
-              ><span class="glyphicon glyphicon-user"></span>Sign Up?</a
-            >
-          </li> -->
           <li>
-            <!-- <button type="button" class="btn btn-success">
-              Login with Google
-            </button> -->
+            <div class="g-signin2" data-onsuccess="onSignIn"></div>
+          </li>
+          <li>
             <a href="#"
-              ><span class="glyphicon glyphicon-log-in"></span>Login with
-              Google</a
+              ><span class="glyphicon glyphicon-log-in"></span>Google login</a
             >
           </li>
         </ul>
@@ -42,8 +40,11 @@
     <div class="container">
       <div class="row">
         <div class="col-md-6 col-md-offset-3">
-          <h2>Sign Up Form</h2>
-          <form class="signup">
+          <h2>
+            Welcome to IdeaEXPO playground! Share ideas, find collaborators,
+            develop and create your business.
+          </h2>
+          <!-- <form class="signup">
             <div class="form-group">
               <label for="exampleInputEmail1">Email address</label>
               <input
@@ -77,12 +78,13 @@
             <button type="submit" class="btn btn-default">Sign Up</button>
           </form>
           <br />
-          <p>Or log in <a href="/login">here</a></p>
+          <p>Or log in <a href="/login">here</a></p> -->
         </div>
       </div>
     </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script type="text/javascript" src="js/signup.js"></script>
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
   </body>
 </html>
