@@ -1,4 +1,17 @@
 form.signup,
 form.login {
   margin-top: 50px;
+  font-family: "Proxima Nova", "proxima-nova", "Helvetica", "Arial", sans-serif;
+  color: white;
+}
+body {
+  background: url("../img/colored_bulbs.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: white;
+  font-size: large;
+}
+h2 {
+  color: white;
+  font-size: x-large;
 }
