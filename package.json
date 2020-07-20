@@ -33,10 +33,10 @@
   "devDependencies": {},
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/szaster/Project2.git"
+    "url": "git+https://github.com/szaster/IdeaEXPO.git"
   },
   "bugs": {
-    "url": "https://github.com/szaster/Project2/issues"
+    "url": "https://github.com/szaster/IdeaEXPO/issues"
   },
-  "homepage": "https://github.com/szaster/Project2#readme"
+  "homepage": "https://github.com/szaster/IdeaEXPO#readme"
 }
