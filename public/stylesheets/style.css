@@ -6,9 +6,11 @@ form.login {
 }
 body {
   /* background: url("../img/colored_bulbs.jpg"); */
-  background: url("../img/paint_bulb.jpg");
+  /* background: url("../img/paint_bulb.jpg"); */
+  background: url("../img/bulb_hand.jpg");
+  /* background: url("../img/big-ideas.png"); */
   background-repeat: no-repeat;
-  background-size: 50%;
+  background-size: 100%;
   color: white;
   font-size: large;
 }
