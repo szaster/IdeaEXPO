@@ -1,7 +1,7 @@
 {
   "development": {
     "username": "root",
-    "password": "EmnvaznkzN7!",
+    "password": "rootroot",
     "database": "ideas_db",
     "host": "127.0.0.1",
     "dialect": "mysql"
