@@ -5,15 +5,25 @@ form.login {
   color: white;
 }
 body {
+<<<<<<< HEAD
   /* background: url("../img/colored_bulbs.jpg"); */
   /* background: url("../img/paint_bulb.jpg"); */
   background: url("../img/bulb_hand.jpg");
   /* background: url("../img/big-ideas.png"); */
+=======
+  background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)),
+    url("../img/bulb_hand.jpg");
+  /* width: auto; */
+  /* background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)),
+    url("../img/bulb_hand.jpg"); */
+  background-size: cover;
+  background-repeat: no-repeat;
+>>>>>>> 8e1619847866f527cbf47acfb5a10af4fa2ec67e
   background-size: 100%;
   color: white;
   font-size: large;
 }
-/* h2 {
+h2 {
   color: white;
   font-size: x-large;
-} */
+}
