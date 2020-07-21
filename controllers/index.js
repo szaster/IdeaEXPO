@@ -1,5 +1,6 @@
 // Requiring path to so we can use relative routes to our HTML files
-const path = require("path");
+var express = require("express");
+var app = express.Router();
 
 // Requiring our custom middleware for checking if a user is logged in
 const {
@@ -14,10 +15,10 @@ module.exports = function (app) {
     });
   });
 
-  app.get("/dashboard", ensureAuth, (req, res) => {
+  app.get("/dashboard", ensureUser, (req, res) => {
     // If the user already has an account send them to the home page
     res.render("dashboard", {
-      name: req.user.firstName,
+      layout: "main",
     });
   });
 };
