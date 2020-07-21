@@ -3,6 +3,7 @@ const express = require("express");
 const session = require("express-session");
 // Requiring passport as we've configured it
 const passport = require("./config/passport");
+const exphbs = require("express-handlebars");
 
 // Setting up port and requiring models for syncing
 const PORT = process.env.PORT || 8080;
@@ -17,12 +18,22 @@ app.use(express.static("public"));
 app.use(
   session({ secret: "keyboard cat", resave: true, saveUninitialized: true })
 );
+//Passport middleware
 app.use(passport.initialize());
 app.use(passport.session());
 
+// Handlebars
+
+app.engine("handlebars", exphbs({ defaultLayout: "main" }));
+app.set("view engine", "handlebars");
+
 // Requiring our routes
-require("./controllers/route")(app);
-require("./controllers/api-routes.js")(app);
+app.use("/", require("./controllers/index"));
+app.use("/auth", require("./controllers/auth"));
+
+// require("./controllers/auth")(app);
+// require("./controllers/route")(app);
+// require("./controllers/api-routes.js")(app);
 
 // Syncing our database and logging a message to the user upon success
 db.sequelize.sync().then(() => {
