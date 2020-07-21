@@ -1,8 +1,38 @@
+// const GoogleStrategy = require("passport-google-oauth2").Strategy;
 const passport = require("passport");
 const LocalStrategy = require("passport-local").Strategy;
 
-const db = require("../models");
+// const db = require("../models/user");
+// // const { Strategy } = require("passport");
+// // const user = require("../models/user");
 
+// // require("dotenv").config();
+
+// passport.use(
+//   new GoogleStrategy(
+//     {
+//       clientID: process.env.GOOGLE_CLIENT_ID,
+//       clientSecret: process.env.GOOGLE_CLIENT_SECRET,
+//       callbackURL: "/auth/google/callback",
+//     },
+//     async (accessToken, refreshToken, profile, done) => {
+//       console.log(profile);
+//     }
+//   )
+// );
+
+// passport.serializeUser((user, done) => {
+//   done(null, user.id);
+// });
+
+// passport.deserializeUser((id, done) => {
+//   user.findById(id, (err, user) => done(err, user));
+// });
+
+// // // Exporting our configured passport
+// module.exports = passport;
+
+/////////////////*******OLD Code below********//////////////////////////
 // Telling passport we want to use a Local Strategy.
 //In other words, we want login with a username/email and password
 passport.use(
