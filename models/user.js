@@ -24,14 +24,10 @@ module.exports = function (sequelize, DataTypes) {
       allowNull: false,
       unique: true,
     },
-    // image: {
-    //   type: DataTypes.String,
-    //   allowNull: true,
-    // },
-    // createdAt: {
-    //   type: DataTypes.Date,
-    //   default: Date.now,
-    // },
+    image: {
+      type: DataTypes.BLOB("long"),
+      allowNull: true,
+    },
   });
   return UserSchema;
 };

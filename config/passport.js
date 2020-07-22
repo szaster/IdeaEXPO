@@ -14,10 +14,26 @@ passport.use(
       callbackURL: "/auth/google/callback",
     },
     async (accessToken, refreshToken, profile, done) => {
-      console.log("Authenticated");
-      console.log("Profile", profile);
-      console.log("Access Token", accessToken);
-      console.log("Refresh Token", refreshToken);
+      const newUser = {
+        googleId: profile.id,
+        displayName: profile.displayName,
+        firstName: profile.name.givenName,
+        lastName: profile.familyName,
+        image: profile.photos[0].value,
+      };
+
+      try {
+        let user = await user.findOne({ googleId: profile.id });
+
+        if (user) {
+          done(null, user);
+        } else {
+          user = await user.create(newUser);
+          done(null, user);
+        }
+      } catch (err) {
+        console.log(err);
+      }
     }
   )
 );
