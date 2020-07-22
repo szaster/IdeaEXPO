@@ -1,6 +1,6 @@
 const GoogleStrategy = require("passport-google-oauth2").Strategy;
 const passport = require("passport");
-const LocalStrategy = require("passport-local").Strategy;
+// const LocalStrategy = require("passport-local").Strategy;
 
 const db = require("../models");
 
@@ -39,12 +39,17 @@ passport.use(
   )
 );
 
+// // In order to help keep authentication state across HTTP requests,
+// // Sequelize needs to serialize and deserialize the user
+// // Just consider this part boilerplate needed to make it all work
+
 passport.serializeUser((user, done) => {
-  done(null, user.id);
+  done(null, user);
 });
 
-passport.deserializeUser((id, done) => {
-  user.findById(id, (err, user) => done(err, user));
+passport.deserializeUser((obj, done) => {
+  // user.findById(id, (err, user) => done(err, user));
+  done(null, obj);
 });
 
 // // // Exporting our configured passport

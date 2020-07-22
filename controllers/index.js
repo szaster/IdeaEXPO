@@ -8,33 +8,42 @@ const {
   ensureAuth,
   ensureUser,
 } = require("../config/middleware/isAuthenticated");
+const idea = require("../models/idea");
 
-// module.exports = function (app) {
-//   app.get("/", ensureUser, (req, res) => {
-//     res.render("intro", {
-//       layout: "intro",
-//     });
-//   });
-
-//   app.get("/dashboard", ensureUser, (req, res) => {
-//     // If the user already has an account send them to the home page
-//     res.render("dashboard", {
-//       layout: "main",
-//     });
-//   });
-// };
-
+//   Login/Landing page
+//   GET /
 router.get("/", ensureUser, (req, res) => {
   res.render("intro", {
     layout: "intro",
   });
 });
+//   Dashboard
+//   GET /dashboard
 
-router.get("/dashboard", ensureUser, (req, res) => {
+//////////old code below//////////
+
+router.get("/dashboard", ensureAuth, (req, res) => {
   // If the user already has an account send them to the home page
   res.render("dashboard", {
     layout: "main",
   });
 });
+///////////////////////////////////////////
 
+// router.get("/dashboard", ensureAuth, async (req, res) => {
+//   // If the user already has an account send them to the home page
+//   try {
+//     const ideas = await idea.findOne({ where: { user: req.user.id } }).lean();
+//     res.render("dashboard", {
+//       name: req.user.firstName,
+//       ideas,
+//     });
+//   } catch (err) {
+//     console.error(err);
+//     res.render("error/500");
+//   }
+//   // res.render("dashboard", {
+//   //   layout: "main",
+//   // });
+// });
 module.exports = router;
