@@ -1,7 +1,7 @@
 // Requiring necessary npm packages
 const express = require("express");
 const session = require("express-session");
-// const dotenv = require("dotenv");
+const dotenv = require("dotenv");
 
 // dotenv.config({ path: "./config/config.env" });
 
@@ -23,6 +23,7 @@ app.use(
 );
 //Passport middleware
 app.use(passport.initialize());
+// integrate passport with our express session middleware
 app.use(passport.session());
 
 // Handlebars
