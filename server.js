@@ -1,7 +1,7 @@
 // Requiring necessary npm packages
 const express = require("express");
 const session = require("express-session");
-// const dotenv = require("dotenv");
+const dotenv = require("dotenv");
 
 // dotenv.config({ path: "./config/config.env" });
 
