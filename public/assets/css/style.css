@@ -1,32 +1,35 @@
 html {
-    position: relative;
-    min-height: 100%;
+
+  position: relative;
+  min-height: 100%;
 }
 
 body {
-    margin-bottom: 45px;
-    background-color: #C5E8EA;
-
-    
+  margin-bottom: 45px;
+  background-color: #c5e8ea;
 }
 
 .welcome-container {
-    margin: 20px !important;
-    margin-right: 20px;
+  margin: 20px !important;
+  margin-right: 20px;
 }
 
 footer {
-    position: absolute;
-    bottom: 0;
-    height: 45px;
-    text-align: center;
-    width: 100%;
-    background-color: #C5E8EA;
-    border-top: 2px solid #042f65;
+  position: absolute;
+  bottom: 0;
+  height: 45px;
+  text-align: center;
+  width: 100%;
+  background-color: #c5e8ea;
+  border-top: 2px solid #042f65;
 }
 
-footer small {
-    line-height: 40px;
-    color: #042f65;
-    font-size: 12px;
+footer h6 {
+  line-height: 40px;
+  color: #042f65;
+  font-size: 12px;
 }
+
+/* .addBtn {
+ 
+} */
