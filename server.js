@@ -1,19 +1,26 @@
-// Requiring necessary npm packages
-const express = require("express");
-const session = require("express-session");
-const dotenv = require("dotenv");
+const path = require('path')
+const express = require('express');
+//const mongoose = require('mongoose')
+const dotenv = require('dotenv')
+const morgan = require('morgan');
+const exphbs = require('express-handlebars')
+const methodOverride = require('method-override')
+const passport = require('passport')
+const session = require('express-session')
 
-// dotenv.config({ path: "./config/config.env" });
+//const MongoStore = require('connect-mongo')(session)
+//const connectDB = require('./config/db')
 
-// Requiring passport as we've configured it
-const passport = require("./config/passport");
+// Load config
+dotenv.config({ path: './config/config.env' })
 
-// Setting up port and requiring models for syncing
-const PORT = process.env.PORT || 8080;
-const db = require("./models");
+// Passport config
+require('./config/passport')(passport)
 
-// Creating express app and configuring middleware needed for authentication
+//connectDB();
+
 const app = express();
+
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
@@ -50,3 +57,60 @@ db.sequelize.sync().then(() => {
     );
   });
 });
+
+const PORT = process.env.PORT || 8080;
+
+// Body parser
+app.use(express.urlencoded({ extended: false }))
+app.use(express.json())
+
+// Method override
+app.use(methodOverride(function (req, res) {
+    if (req.body && typeof req.body === 'object' && '_method' in req.body) {
+        // look in urlencoded POST bodies and delete it
+        let method = req.body._method
+        delete req.body._method
+        return method
+    }
+}))
+
+//Logging
+if (process.env.NODE_ENV === 'development') {
+    app.use(morgan('dev'))
+}
+
+// Handlebars Helpers
+//const { formatDate, stripTags, truncate, editIcon, select} = require('./helpers/hbs')
+
+// Handlebars
+app.engine('.hbs', exphbs({defaultLayout: 'main', extname: '.hbs'}));
+app.set('view engine', '.hbs');
+
+// Passport Session
+app.use(session({
+    secret: 'keyboard cat',
+    resave: false,
+    saveUninitialized: false,
+   // store: new MongoStore({ mongooseConnection: mongoose.connection})
+}))
+
+// Set Passport middleware//
+app.use(passport.initialize())
+app.use(passport.session())
+
+// Set global var
+app.use(function (req, res, next) {
+    res.locals.user = req.user || null
+    next()
+})
+
+// Static folder
+app.use(express.static(path.join(__dirname, 'public')))
+
+// Routes
+ app.use('/', require('./controllers/index'))
+app.use('/auth', require('./controllers/auth'))
+app.use('/ideas', require('./controllers/ideas'))
+
+app.listen(PORT, console.log(`Server running in ${process.env.NODE_ENV} mode on port ${PORT} `));
+
