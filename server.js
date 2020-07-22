@@ -21,6 +21,43 @@ require('./config/passport')(passport)
 
 const app = express();
 
+
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
+app.use(express.static("public"));
+// We need to use sessions to keep track of our user's login status
+app.use(
+  session({ secret: "keyboard cat", resave: true, saveUninitialized: true })
+);
+//Passport middleware
+app.use(passport.initialize());
+// integrate passport with our express session middleware
+app.use(passport.session());
+
+// Handlebars
+const exphbs = require("express-handlebars");
+
+app.engine(".hbs", exphbs({ extname: ".hbs" }));
+app.set("view engine", ".hbs");
+
+// Requiring our routes
+app.use("/", require("./controllers/index"));
+app.use("/auth", require("./controllers/auth"));
+
+// require("./controllers/index")(app);
+// require("./controllers/api-routes.js")(app);
+
+// Syncing our database and logging a message to the user upon success
+db.sequelize.sync().then(() => {
+  app.listen(PORT, () => {
+    console.log(
+      "==> 🌎  Listening on port %s. Visit http://localhost:%s/ in your browser.",
+      PORT,
+      PORT
+    );
+  });
+});
+
 const PORT = process.env.PORT || 8080;
 
 // Body parser
@@ -76,3 +113,4 @@ app.use('/auth', require('./controllers/auth'))
 app.use('/ideas', require('./controllers/ideas'))
 
 app.listen(PORT, console.log(`Server running in ${process.env.NODE_ENV} mode on port ${PORT} `));
+

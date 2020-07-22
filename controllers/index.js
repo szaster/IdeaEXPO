@@ -1,10 +1,23 @@
 // Requiring path to so we can use relative routes to our HTML files
 const express = require("express");
 const router = express.Router();
+
+// const passport = require("../config/passport");
+
 //const { ensureAuth, ensureGuest} = require('../config/middleware/auth')
+
 
 //const Story = require('../models/Idea')
 // Requiring our custom middleware for checking if a user is logged in
+
+const {
+  ensureAuth,
+  ensureUser,
+} = require("../config/middleware/isAuthenticated");
+
+// module.exports = function (app) {
+//   app.get("/", ensureUser, (req, res) => {
+
 // const {
 //   ensureAuth,
 //   ensureUser,
@@ -12,18 +25,38 @@ const router = express.Router();
 
 // module.exports = function (router) {
 //   router.get("/", ensureUser, (req, res) => {
+
 //     res.render("intro", {
 //       layout: "intro",
 //     });
 //   });
 
+
+//   app.get("/dashboard", ensureUser, (req, res) => {
+
 //   router.get("/dashboard", ensureUser, (req, res) => {
+
 //     // If the user already has an account send them to the home page
 //     res.render("dashboard", {
 //       layout: "main",
 //     });
 //   });
 // };
+
+router.get("/", ensureUser, (req, res) => {
+  res.render("intro", {
+    layout: "intro",
+  });
+});
+
+router.get("/dashboard", ensureUser, (req, res) => {
+  // If the user already has an account send them to the home page
+  res.render("dashboard", {
+    layout: "main",
+  });
+});
+
+module.exports = router;
 
 // @desc Dashboard
 // @route GET /dashboard
@@ -81,3 +114,4 @@ router.get('/dashboard', ensureAuth, async (req, res) => {
 
 
 module.exports = router
+
