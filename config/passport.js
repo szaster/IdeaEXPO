@@ -1,6 +1,6 @@
 const GoogleStrategy = require("passport-google-oauth2").Strategy;
 const passport = require("passport");
-// const LocalStrategy = require("passport-local").Strategy;
+const LocalStrategy = require("passport-local").Strategy;
 
 const db = require("../models");
 
@@ -18,17 +18,18 @@ passport.use(
         googleId: profile.id,
         displayName: profile.displayName,
         firstName: profile.name.givenName,
-        lastName: profile.familyName,
+        lastName: profile.name.familyName,
         image: profile.photos[0].value,
       };
 
       try {
-        let user = await user.findOne({ googleId: profile.id });
+        let user = await db.user.findOne({ where: { googleId: profile.id } });
+        console.log("user profile id is", user);
 
         if (user) {
           done(null, user);
         } else {
-          user = await user.create(newUser);
+          user = await db.user.create(newUser);
           done(null, user);
         }
       } catch (err) {
