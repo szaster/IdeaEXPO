@@ -1,36 +1,29 @@
-// Requiring bcrypt for password hashing. Using the bcryptjs version as the regular bcrypt module sometimes causes errors on Windows machines
-// const bcrypt = require("bcryptjs");
-
-// Creating our User model
+// Creating Story model
 
 module.exports = function (sequelize, DataTypes) {
-  const UserSchema = sequelize.define("user", {
-    googleId: {
+  const StorySchema = sequelize.define("story", {
+    user: {
       type: DataTypes.STRING,
       allowNull: false,
       unique: true,
     },
-    displayName: {
+    title: {
       type: DataTypes.STRING,
       allowNull: false,
-      unique: false,
+      unique: true,
     },
-    firstName: {
+    body: {
       type: DataTypes.STRING,
       allowNull: false,
-      unique: false,
+      unique: true,
     },
-    lastName: {
-      type: DataTypes.STRING,
-      allowNull: false,
-      unique: false,
-    },
-    image: {
-      type: DataTypes.BLOB("long"),
-      allowNull: true,
-    },
+    // status: {
+    //   type: DataTypes.String,
+    //   default: "public",
+    //   enum: ["public", "private"],
+    // },
   });
-  return UserSchema;
+  return StorySchema;
 };
 // module.exports = sequelize.model("user", UserSchema);
 
