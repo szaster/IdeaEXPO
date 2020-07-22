@@ -14,6 +14,7 @@ const db = require("./models");
 
 // Creating express app and configuring middleware needed for authentication
 const app = express();
+
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(express.static("public"));
@@ -33,11 +34,10 @@ app.engine(".hbs", exphbs({ extname: ".hbs" }));
 app.set("view engine", ".hbs");
 
 // Requiring our routes
-// app.use("/", require("./controllers/index"));
-// app.use("/auth", require("./controllers/auth"));
+app.use("/", require("./controllers/index"));
+app.use("/auth", require("./controllers/auth"));
 
-// require("./controllers/auth")(app);
-require("./controllers/index")(app);
+// require("./controllers/index")(app);
 // require("./controllers/api-routes.js")(app);
 
 // Syncing our database and logging a message to the user upon success
