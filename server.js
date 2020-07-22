@@ -1,64 +1,78 @@
-// Requiring necessary npm packages
-const express = require("express");
-const session = require("express-session");
-const dotenv = require("dotenv");
-const morgan = require("morgan");
-const exphbs = require("express-handlebars");
-const app = express();
-const passport = require("./config/passport");
+const path = require('path')
+const express = require('express');
+//const mongoose = require('mongoose')
+const dotenv = require('dotenv')
+const morgan = require('morgan');
+const exphbs = require('express-handlebars')
+const methodOverride = require('method-override')
+const passport = require('passport')
+const session = require('express-session')
+
+//const MongoStore = require('connect-mongo')(session)
+//const connectDB = require('./config/db')
 
 // Load config
-dotenv.config({ path: "./config/config.env" });
+dotenv.config({ path: './config/config.env' })
 
 // Passport config
-//require("./config/passport")(passport);
-// Requiring passport as we've configured it
+require('./config/passport')(passport)
 
-// Setting up port and requiring models for syncing
+//connectDB();
+
+const app = express();
+
 const PORT = process.env.PORT || 8080;
-const db = require("./models");
 
-// Creating express app and configuring middleware needed for authentication
-app.use(express.urlencoded({ extended: true }));
-app.use(express.json());
-app.use(express.static("public"));
-// We need to use sessions to keep track of our user's login status
-app.use(
-	session({ secret: "keyboard cat", resave: true, saveUninitialized: true })
-);
+// Body parser
+app.use(express.urlencoded({ extended: false }))
+app.use(express.json())
 
-// Handlebars
-app.engine(".hbs", exphbs({ extname: ".hbs" }));
-app.set("view engine", ".hbs");
-
-// Session
-app.use(session({
-  secret: 'keyboard cat',
-  resave: false,
-  saveUninitialized: false,
-  // Add Sequelize here
-  //store: new MongoStore({ mongooseConnection: mongoose.connection})
+// Method override
+app.use(methodOverride(function (req, res) {
+    if (req.body && typeof req.body === 'object' && '_method' in req.body) {
+        // look in urlencoded POST bodies and delete it
+        let method = req.body._method
+        delete req.body._method
+        return method
+    }
 }))
 
-//Passport middleware
-app.use(passport.initialize());
-app.use(passport.session());
+//Logging
+if (process.env.NODE_ENV === 'development') {
+    app.use(morgan('dev'))
+}
 
-// Requiring our routes
-// app.use("/", require("./controllers/index"));
-// app.use("/auth", require("./controllers/auth"));
+// Handlebars Helpers
+//const { formatDate, stripTags, truncate, editIcon, select} = require('./helpers/hbs')
 
-// require("./controllers/auth")(app);
-require("./controllers/index")(app);
-// require("./controllers/api-routes.js")(app);
+// Handlebars
+app.engine('.hbs', exphbs({defaultLayout: 'main', extname: '.hbs'}));
+app.set('view engine', '.hbs');
 
-// Syncing our database and logging a message to the user upon success
-db.sequelize.sync().then(() => {
-	app.listen(PORT, () => {
-		console.log(
-			"==> 🌎  Listening on port %s. Visit http://localhost:%s/ in your browser.",
-			PORT,
-			PORT
-		);
-	});
-});
+// Passport Session
+app.use(session({
+    secret: 'keyboard cat',
+    resave: false,
+    saveUninitialized: false,
+   // store: new MongoStore({ mongooseConnection: mongoose.connection})
+}))
+
+// Set Passport middleware//
+app.use(passport.initialize())
+app.use(passport.session())
+
+// Set global var
+app.use(function (req, res, next) {
+    res.locals.user = req.user || null
+    next()
+})
+
+// Static folder
+app.use(express.static(path.join(__dirname, 'public')))
+
+// Routes
+ app.use('/', require('./controllers/index'))
+app.use('/auth', require('./controllers/auth'))
+app.use('/ideas', require('./controllers/ideas'))
+
+app.listen(PORT, console.log(`Server running in ${process.env.NODE_ENV} mode on port ${PORT} `));
