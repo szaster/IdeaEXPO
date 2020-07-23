@@ -8,11 +8,12 @@ const {
   ensureAuth,
   ensureUser,
 } = require("../config/middleware/isAuthenticated");
+
 const idea = require("../models/idea");
 
 //   Login/Landing page
 //   GET /
-router.get("/", ensureUser, (req, res) => {
+router.get("/", (req, res) => {
   res.render("intro", {
     layout: "intro",
   });

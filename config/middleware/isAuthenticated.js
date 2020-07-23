@@ -10,10 +10,11 @@ module.exports = {
   },
   // If the user is already logged in, it'll take them to the homepage
   ensureUser: function (req, res, next) {
-    if (!req.isAuthenticated()) {
-      return next();
-    } else {
+    if (req.isAuthenticated()) {
       res.redirect("/dashboard");
+      
+    } else {
+      return next();
     }
   },
 };
