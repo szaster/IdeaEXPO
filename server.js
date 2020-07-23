@@ -35,6 +35,7 @@ app.set("view engine", ".hbs");
 // Requiring our routes
 app.use("/", require("./controllers/index"));
 app.use("/auth", require("./controllers/auth"));
+app.use('/ideas', require('./controllers/ideas'))
 
 // Syncing our database and logging a message to the user upon success
 db.sequelize.sync().then(() => {
