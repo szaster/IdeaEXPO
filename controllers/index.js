@@ -19,9 +19,6 @@ router.get("/", ensureUser, (req, res) => {
 });
 //   Dashboard
 //   GET /dashboard
-
-//////////old code below//////////
-
 router.get("/dashboard", ensureAuth, (req, res) => {
   // If the user already has an account send them to the home page
   res.render("dashboard", {
