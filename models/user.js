@@ -13,17 +13,17 @@ module.exports = function (sequelize, DataTypes) {
     displayName: {
       type: DataTypes.STRING,
       allowNull: false,
-      unique: false,
+      unique: true,
     },
     firstName: {
       type: DataTypes.STRING,
       allowNull: false,
-      unique: false,
+      unique: true,
     },
     lastName: {
       type: DataTypes.STRING,
       allowNull: false,
-      unique: false,
+      unique: true,
     },
     image: {
       type: DataTypes.BLOB("long"),

@@ -1,7 +1,7 @@
 // Creating Story model
 
 module.exports = function (sequelize, DataTypes) {
-  const StorySchema = sequelize.define("story", {
+  const IdeaSchema = sequelize.define("idea", {
     user: {
       type: DataTypes.STRING,
       allowNull: false,
@@ -23,7 +23,7 @@ module.exports = function (sequelize, DataTypes) {
     //   enum: ["public", "private"],
     // },
   });
-  return StorySchema;
+  return IdeaSchema;
 };
 // module.exports = sequelize.model("user", UserSchema);
 

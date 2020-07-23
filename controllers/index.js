@@ -28,7 +28,8 @@ router.get("/dashboard", ensureAuth, (req, res) => {
     layout: "main",
   });
 });
-///////////////////////////////////////////
+
+module.exports = router;
 
 // router.get("/dashboard", ensureAuth, async (req, res) => {
 //   // If the user already has an account send them to the home page
@@ -46,4 +47,3 @@ router.get("/dashboard", ensureAuth, (req, res) => {
 //   //   layout: "main",
 //   // });
 // });
-module.exports = router;
