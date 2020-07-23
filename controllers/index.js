@@ -20,6 +20,7 @@ router.get("/", (req, res) => {
 });
 //   Dashboard
 //   GET /dashboard
+
 // router.get("/dashboard", ensureAuth, (req, res) => {
 //     Idea.Post.findOne({
 //       where: {
@@ -44,6 +45,7 @@ router.get("/dashboard", ensureAuth, async (req, res) => {
 		console.error(err);
 		res.render("error/500");
 	}
+
 });
 
 module.exports = router;

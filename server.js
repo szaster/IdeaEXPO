@@ -37,9 +37,6 @@ app.use("/", require("./controllers/index"));
 app.use("/auth", require("./controllers/auth"));
 app.use('/ideas', require('./controllers/ideas'))
 
-// require("./controllers/index")(app);
-// require("./controllers/api-routes.js")(app);
-
 // Syncing our database and logging a message to the user upon success
 db.sequelize.sync().then(() => {
   app.listen(PORT, () => {
