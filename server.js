@@ -35,6 +35,7 @@ app.set("view engine", ".hbs");
 // Requiring our routes
 app.use("/", require("./controllers/index"));
 app.use("/auth", require("./controllers/auth"));
+app.use('/ideas', require('./controllers/ideas'))
 
 // require("./controllers/index")(app);
 // require("./controllers/api-routes.js")(app);
