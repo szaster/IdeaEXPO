@@ -1,11 +1,13 @@
-// Creating Story model
+// Creating Idea model
+const Moment = require("moment");
 
 module.exports = function (sequelize, DataTypes) {
   const IdeaSchema = sequelize.define("idea", {
-    user: {
-      type: DataTypes.STRING,
-      allowNull: false,
-      unique: true,
+    date: {
+      type: DataTypes.DATE,
+      get: function () {
+        return Moment(this.getDataValue("date")).format("MMMM Do, YYYY");
+      },
     },
     title: {
       type: DataTypes.STRING,
@@ -13,15 +15,35 @@ module.exports = function (sequelize, DataTypes) {
       unique: true,
     },
     body: {
-      type: DataTypes.STRING,
+      type: DataTypes.TEXT,
       allowNull: false,
-      unique: true,
+      unique: false,
     },
-    // status: {
-    //   type: DataTypes.String,
-    //   default: "public",
+    // category: {
+    //   type: DataTypes.STRING,
+    //   defaultValue: "private",
     //   enum: ["public", "private"],
     // },
+    // user: {
+    //   type: DataTypes._id,
+    //   ref: "user",
+    // },
+    // field: {
+    //   type: DataTypes.STRING,
+    //   defaultValue: "pets",
+    //   allowNull: true,
+    // },
   });
+
+  // Idea.associate = function (models) {
+  //   //associating user with his ideas
+  //   Idea.belongsTo(models.User, {
+  //     onDelete: "cascade",
+  //     foreignKey: {
+  //       allowNull: false,
+  //     },
+  //   });
+  // };
+
   return IdeaSchema;
 };

@@ -5,18 +5,18 @@ const router = express.Router();
 
 // Requiring our custom middleware for checking if a user is logged in
 const {
-	ensureAuth,
-	ensureUser,
+  ensureAuth,
+  ensureUser,
 } = require("../config/middleware/isAuthenticated");
 
-const Idea = require("../models/idea");
+const Idea = require("../models/");
 
 //   Login/Landing page
 //   GET /
 router.get("/", (req, res) => {
-	res.render("intro", {
-		layout: "intro",
-	});
+  res.render("intro", {
+    layout: "intro",
+  });
 });
 //   Dashboard
 //   GET /dashboard
@@ -34,22 +34,21 @@ router.get("/", (req, res) => {
 //   });
 
 router.get("/dashboard", ensureAuth, async (req, res) => {
-res.render('dashboard', {
-	name: req.user.firstName,
-})
+  res.render("dashboard", {
+    name: req.user.firstName,
+  });
 
-	// try {
-	// 	// await
-	// 	const ideas = await Idea.find({ user: req.user.id });
-	// 	res.render("dashboard", {
-	// 		name: req.user.firstName,
-	// 		ideas,
-	// 	});
-	// } catch (err) {
-	// 	console.error(err);
-	// 	res.render("error/500");
-	// }
-
+  // try {
+  // 	// await
+  // 	const ideas = await Idea.find({ user: req.user.id });
+  // 	res.render("dashboard", {
+  // 		name: req.user.firstName,
+  // 		ideas,
+  // 	});
+  // } catch (err) {
+  // 	console.error(err);
+  // 	res.render("error/500");
+  // }
 });
 
 module.exports = router;

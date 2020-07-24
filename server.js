@@ -2,7 +2,7 @@
 const express = require("express");
 const session = require("express-session");
 const dotenv = require("dotenv");
-
+const path = require("path");
 
 // Requiring passport as we've configured it
 const passport = require("./config/passport");
@@ -35,7 +35,7 @@ app.set("view engine", ".hbs");
 // Requiring our routes
 app.use("/", require("./controllers/index"));
 app.use("/auth", require("./controllers/auth"));
-app.use('/ideas', require('./controllers/ideas'))
+app.use("/ideas", require("./controllers/ideas"));
 
 // Syncing our database and logging a message to the user upon success
 db.sequelize.sync().then(() => {
