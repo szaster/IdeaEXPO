@@ -2,7 +2,7 @@ const express = require("express");
 const router = express.Router();
 const { ensureAuth } = require("../config/middleware/isAuthenticated");
 
-const Story = require("../models");
+const Idea = require("../models");
 
 // @desc Show add page
 // @route GET /stories/add
@@ -27,7 +27,7 @@ router.post("/", ensureAuth, async (req, res) => {
 // @route GET /stories
 router.get("/", ensureAuth, async (req, res) => {
   try {
-    const stories = await Story.find({ status: "public" })
+    const ideas = await Idea.find({ status: "public" })
       .populate("user")
       .sort({ createdAt: "desc" })
       .lean();
@@ -45,7 +45,7 @@ router.get("/", ensureAuth, async (req, res) => {
 // @route GET /stories/id
 router.get("/:id", ensureAuth, async (req, res) => {
   try {
-    let story = await Story.findById(req.params.id).populate("user").lean();
+    let idea = await Idea.findById(req.params.id).populate("user").lean();
 
     if (!idea) {
       return res.render("error/404");
@@ -64,7 +64,7 @@ router.get("/:id", ensureAuth, async (req, res) => {
 // @route GET /stories/edit/:id
 router.get("/edit/:id", ensureAuth, async (req, res) => {
   try {
-    const story = await Story.findOne({
+    const idea = await Idea.findOne({
       where: {
         _id: req.params.id,
       },
@@ -133,7 +133,7 @@ router.delete("/:id", ensureAuth, async (req, res) => {
 // @route GET /stories/user/:userId
 router.get("/user/:userId", ensureAuth, async (req, res) => {
   try {
-    const stories = await Idea.find({
+    const ideas = await Idea.find({
       user: req.params.userId,
       status: "public",
     })

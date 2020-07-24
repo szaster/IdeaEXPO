@@ -9,7 +9,7 @@ const {
 	ensureUser,
 } = require("../config/middleware/isAuthenticated");
 
-const Idea = require("../models");
+const Idea = require("../models/idea");
 
 //   Login/Landing page
 //   GET /
@@ -34,17 +34,21 @@ router.get("/", (req, res) => {
 //   });
 
 router.get("/dashboard", ensureAuth, async (req, res) => {
-	try {
-		// await
-		const ideas = await Idea.findAll({ user: req.user.id });
-		res.render("dashboard", {
-			name: req.user.firstName,
-			ideas,
-		});
-	} catch (err) {
-		console.error(err);
-		res.render("error/500");
-	}
+res.render('dashboard', {
+	name: req.user.firstName,
+})
+
+	// try {
+	// 	// await
+	// 	const ideas = await Idea.find({ user: req.user.id });
+	// 	res.render("dashboard", {
+	// 		name: req.user.firstName,
+	// 		ideas,
+	// 	});
+	// } catch (err) {
+	// 	console.error(err);
+	// 	res.render("error/500");
+	// }
 
 });
 
