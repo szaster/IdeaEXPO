@@ -30,6 +30,17 @@ module.exports = function (sequelize, DataTypes) {
       allowNull: true,
     },
   });
+
+  // User.associate = function (models) {
+  //   //associating user with his posts
+  //   User.hasMany(models.IdeaSchema, {
+  //     onDelete: "cascade",
+  //     foreignKey: {
+  //       allowNull: false,
+  //     },
+  //   });
+  // };
+
   return UserSchema;
 };
 // module.exports = sequelize.model("user", UserSchema);

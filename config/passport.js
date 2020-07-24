@@ -23,7 +23,9 @@ passport.use(
       };
 
       try {
-        let user = await db.user.findOne({ where: { googleId: profile.id } });
+        let user = await db.user.findOne({
+          where: { googleId: profile.id },
+        });
         console.log("user profile id is", user);
 
         if (user) {
@@ -33,7 +35,7 @@ passport.use(
           done(null, user);
         }
       } catch (err) {
-        console.log(err);
+        console.log("This is a mistake", err);
       }
     }
   )
