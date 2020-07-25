@@ -1,3 +1,4 @@
+// @file desc: Authorizatin middleware and dashboard ideas file
 // Requiring path to so we can use relative routes to our HTML files
 const express = require("express");
 const router = express.Router();
@@ -19,12 +20,11 @@ router.get("/", (req, res) => {
   });
 });
 //   Dashboard
-//   GET /dashboard
+//   GET /dashboard// all the ideas
 //was async (req,res)
 router.get("/dashboard", ensureAuth, async (req, res) => {
   try {
-    const ideas = await db.user.findOne({ user: req.user.id });
-    console.log("dashboard/ideas:", ideas);
+    const ideas = await db.user.findAll({ user: req.user.id });
     res.render("dashboard", {
       name: req.user.firstName,
       ideas,
@@ -33,22 +33,7 @@ router.get("/dashboard", ensureAuth, async (req, res) => {
     console.error(err);
     res.render("error/500");
   }
-
-  // res.render("dashboard", {
-  //   name: req.user.firstName,
-  // });
-
-  // try {
-  //   const ideas = await db.idea.find({ idea: req.idea._id });
-  //   res.render("dashboard", {
-  //     name: req.user.firstName,
-  //     ideas,
-  //   });
-  // } catch (err) {
-  // console.log("this is db.idea", db.idea);
-  // console.error(err);
-  // console.log("name ", name);
-  // console.log("ideas ", ideas);
+  console.log("ideas ", ideas);
   // res.render("error/500");
 });
 
