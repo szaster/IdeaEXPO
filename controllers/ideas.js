@@ -26,9 +26,9 @@ router.post("/", ensureAuth, async (req, res) => {
 
 // @description Display all ideas FETCH AND RENDER ideas
 // @route GET /ideas
-router.get("/", ensureAuth, async (req, res) => {
+router.get("/", ensureAuth,  (req, res) => {
   try {
-    const ideas = await db.idea
+    const ideas =  db.idea
       // .find({ status: "public" })
       .findAll({});
     // .populate("user")

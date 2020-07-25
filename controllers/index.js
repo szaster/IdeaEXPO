@@ -21,9 +21,9 @@ router.get("/", (req, res) => {
 //   Dashboard
 //   GET /dashboard
 //was async (req,res)
-router.get("/dashboard", ensureAuth, async (req, res) => {
+router.get("/dashboard", ensureAuth,  (req, res) => {
   try {
-    const ideas = await db.user.findOne({ user: req.user.id });
+    const ideas =  db.user.findOne({ user: req.user.id });
     res.render("dashboard", {
       name: req.user.firstName,
       ideas,
