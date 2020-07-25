@@ -21,10 +21,22 @@ router.get("/", (req, res) => {
 //   Dashboard
 //   GET /dashboard
 //was async (req,res)
-router.get("/dashboard", ensureAuth, (req, res) => {
-  res.render("dashboard", {
-    name: req.user.firstName,
-  });
+router.get("/dashboard", ensureAuth, async (req, res) => {
+  try {
+    const ideas = await db.user.findOne({ user: req.user.id });
+    res.render("dashboard", {
+      name: req.user.firstName,
+      ideas,
+    });
+  } catch (err) {
+    console.error(err);
+    res.render("error/500");
+  }
+
+  // res.render("dashboard", {
+  //   name: req.user.firstName,
+  // });
+
   // try {
   //   const ideas = await db.idea.find({ idea: req.idea._id });
   //   res.render("dashboard", {
