@@ -10,8 +10,9 @@
 
         <div class="row">
             <div class="input-field">
-                <select name="status" id="status">
-                    <option value="public" selected>Public</option>
+                {{!-- <select name="status" id="status"> --}}
+                <select class="custom-select" id="status">
+                    <option value="public">Public</option>
                     <option value="private">Private</option>
                 </select>
                 <label for="status">Status</label>
@@ -20,7 +21,7 @@
 
         <div class="row">
             <div class="input-field">
-                <h5>Tell Us Your Idea:</h5>
+                <h5>Share Your Idea:</h5>
                 <textarea name="body" id="body" cols="30" rows="10"></textarea>
             </div>
         </div>
