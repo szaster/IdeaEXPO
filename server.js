@@ -27,9 +27,6 @@ app.use(passport.initialize());
 // integrate passport with our express session middleware
 app.use(passport.session());
 
-app.engine(".hbs", exphbs({ extname: ".hbs" }));
-app.set("view engine", ".hbs");
-
 // Method override
 app.use(
   methodOverride(function (req, res) {

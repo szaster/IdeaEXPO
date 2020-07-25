@@ -13,17 +13,17 @@ const db = require("../models");
 
 //   Login/Landing page
 //   GET /
-router.get("/", (req, res) => {
+router.get("/", ensureUser, (req, res) => {
   res.render("intro", {
     layout: "intro",
   });
 });
 //   Dashboard
 //   GET /dashboard
-//was async (req,res)
-router.get("/dashboard", ensureAuth,  (req, res) => {
+router.get("/dashboard", ensureAuth, async (req, res) => {
   try {
-    const ideas =  db.user.findOne({ user: req.user.id });
+    const ideas = await db.idea.findAll({ user: req.user.id, raw: true });
+
     res.render("dashboard", {
       name: req.user.firstName,
       ideas,
@@ -32,23 +32,6 @@ router.get("/dashboard", ensureAuth,  (req, res) => {
     console.error(err);
     res.render("error/500");
   }
-
-  // res.render("dashboard", {
-  //   name: req.user.firstName,
-  // });
-
-  // try {
-  //   const ideas = await db.idea.find({ idea: req.idea._id });
-  //   res.render("dashboard", {
-  //     name: req.user.firstName,
-  //     ideas,
-  //   });
-  // } catch (err) {
-  // console.log("this is db.idea", db.idea);
-  // console.error(err);
-  // console.log("name ", name);
-  // console.log("ideas ", ideas);
-  // res.render("error/500");
 });
 
 module.exports = router;
