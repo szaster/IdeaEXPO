@@ -2,7 +2,7 @@
 const Moment = require("moment");
 
 module.exports = function (sequelize, DataTypes) {
-  const Idea = sequelize.define("Idea", {
+  const Idea = sequelize.define("idea", {
     // date: {
     //   type: DataTypes.DATE,
     //   get: function () {
@@ -33,7 +33,7 @@ module.exports = function (sequelize, DataTypes) {
 
   Idea.associate = function (models) {
     //associating user with his ideas
-    Idea.belongsTo(models.User, {
+    Idea.belongsTo(models.user, {
       // onDelete: "cascade",
       foreignKey: {
         allowNull: false,
