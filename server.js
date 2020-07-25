@@ -3,11 +3,12 @@ const express = require("express");
 const session = require("express-session");
 const dotenv = require("dotenv");
 const path = require("path");
-
+// Handlebars
+const exphbs = require("express-handlebars");
 // Requiring passport as we've configured it
 const passport = require("./config/passport");
-
 // Setting up port and requiring models for syncing
+const methodOverride = require("method-override");
 const PORT = process.env.PORT || 8080;
 const db = require("./models");
 
@@ -26,10 +27,45 @@ app.use(passport.initialize());
 // integrate passport with our express session middleware
 app.use(passport.session());
 
-// Handlebars
-const exphbs = require("express-handlebars");
-
 app.engine(".hbs", exphbs({ extname: ".hbs" }));
+app.set("view engine", ".hbs");
+
+// Method override
+app.use(
+  methodOverride(function (req, res) {
+    if (req.body && typeof req.body === "object" && "_method" in req.body) {
+      // look in urlencoded POST bodies and delete it
+      let method = req.body._method;
+      delete req.body._method;
+      return method;
+    }
+  })
+);
+
+// Handlebars Helpers
+const {
+  formatDate,
+  stripTags,
+  truncate,
+  editIcon,
+  select,
+} = require("./helpers/hbs");
+
+// Handlebars
+app.engine(
+  ".hbs",
+  exphbs({
+    helpers: {
+      formatDate,
+      stripTags,
+      truncate,
+      editIcon,
+      select,
+    },
+    defaultLayout: "main",
+    extname: ".hbs",
+  })
+);
 app.set("view engine", ".hbs");
 
 // Requiring our routes
