@@ -13,15 +13,15 @@
         {{#each ideas}}
         <tr>
             <td><a href="/ideas/{{_id}}">{{title}}</a></td>
-            <td>{{formatDate createdAt "MMMM Do YYYY"}}</td>
+            <td>{{formatDate createdAt "MMMM Do YYYY, h:mm:ss a"}}</td>
             <td><span clas="dash-status">{{status}}</span></td>
             <td>
                 <a href="/ideas/edit/{{_id}}" class="btn btn-float">
                     <i class="fas fa-edit"></i>
                 </a>
                 <form action="/ideas/{{_id}}" method="POST" id="delete-form">
-                    <input type="hidden" name="_method" value="DELETE">
-                    <button type="submit" class="btn-danger">
+                    <input type="hidden" name="method" value="DELETE">
+                    <button type="submit" class="btn red">
                         <i class="fas fa-trash"></i>
                     </button>
                 </form>
