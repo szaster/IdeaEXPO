@@ -9,6 +9,8 @@ const exphbs = require("express-handlebars");
 const passport = require("./config/passport");
 // Setting up port and requiring models for syncing
 const methodOverride = require("method-override");
+const morgan = require("morgan");
+
 const PORT = process.env.PORT || 8080;
 const db = require("./models");
 

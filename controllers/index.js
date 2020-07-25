@@ -24,6 +24,7 @@ router.get("/", (req, res) => {
 router.get("/dashboard", ensureAuth, async (req, res) => {
   try {
     const ideas = await db.user.findOne({ user: req.user.id });
+    console.log("dashboard/ideas:", ideas);
     res.render("dashboard", {
       name: req.user.firstName,
       ideas,

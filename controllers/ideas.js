@@ -34,6 +34,7 @@ router.get("/", ensureAuth, async (req, res) => {
     // .populate("user")
     // .sort({ createdAt: "desc" })
     // .lean();
+    console.log("ideas:", ideas);
 
     res.render("ideas/index", {
       ideas,
@@ -70,7 +71,7 @@ router.get("/edit/:id", ensureAuth, async (req, res) => {
     const idea = await db.idea
       .findOne({
         where: {
-          _id: req.params.id,
+          id: req.params.id,
         },
       })
       .lean();
@@ -106,7 +107,7 @@ router.put("/:id", ensureAuth, async (req, res) => {
       res.redirect("/ideas");
     } else {
       story = await db.idea.findOneAndUpdate(
-        { where: { _id: req.params.id } },
+        { where: { id: req.params.id } },
         req.body,
         {
           new: true,

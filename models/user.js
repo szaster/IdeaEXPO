@@ -4,7 +4,7 @@
 // Creating our User model
 
 module.exports = function (sequelize, DataTypes) {
-  const User = sequelize.define("user", {
+  const User = sequelize.define("User", {
     googleId: {
       type: DataTypes.STRING,
       allowNull: false,
@@ -31,15 +31,12 @@ module.exports = function (sequelize, DataTypes) {
     },
   });
 
-  // User.associate = function (models) {
-  //   //associating user with his posts
-  //   User.hasMany(models.Ideas, {
-  //     onDelete: "cascade",
-  //     foreignKey: {
-  //       allowNull: false,
-  //     },
-  //   });
-  // };
+  User.associate = function (models) {
+    //associating user with his posts
+    User.hasMany(models.Idea, {
+      onDelete: "cascade",
+    });
+  };
 
   return User;
 };

@@ -23,7 +23,7 @@ passport.use(
       };
 
       try {
-        let user = await db.user.findOne({
+        let user = await db.user.find({
           where: { googleId: profile.id },
         });
         console.log("user profile id is", user);

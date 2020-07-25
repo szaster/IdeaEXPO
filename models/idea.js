@@ -2,7 +2,7 @@
 const Moment = require("moment");
 
 module.exports = function (sequelize, DataTypes) {
-  const Idea = sequelize.define("idea", {
+  const Idea = sequelize.define("Idea", {
     // date: {
     //   type: DataTypes.DATE,
     //   get: function () {
@@ -31,15 +31,15 @@ module.exports = function (sequelize, DataTypes) {
     // },
   });
 
-  // Idea.associate = function (models) {
-  //   //associating user with his ideas
-  //   Idea.belongsTo(models.User, {
-  //     onDelete: "cascade",
-  //     foreignKey: {
-  //       allowNull: false,
-  //     },
-  //   });
-  // };
+  Idea.associate = function (models) {
+    //associating user with his ideas
+    Idea.belongsTo(models.User, {
+      // onDelete: "cascade",
+      foreignKey: {
+        allowNull: false,
+      },
+    });
+  };
 
   return Idea;
 };
