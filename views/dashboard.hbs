@@ -13,7 +13,7 @@
         {{#each ideas}}
         <tr>
             <td><a href="/ideas/{{_id}}">{{title}}</a></td>
-            <td>{{formatDate createdAt "MMMM Do YYYY"}}</td>
+            <td>{{formatDate createdAt "MMMM Do YYYY, h:mm:ss a"}}</td>
             <td><span clas="dash-status">{{status}}</span></td>
             <td>
                 <a href="/ideas/edit/{{_id}}" class="btn btn-float">

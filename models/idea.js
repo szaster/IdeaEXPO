@@ -19,14 +19,11 @@ module.exports = function (sequelize, DataTypes) {
       allowNull: false,
       unique: false,
     },
-    // status: {
-    //   type: DataTypes.STRING,
-    //   allowNull: false,
-    //   defaultValue: "Personal",
-    //   // enum: ["public", "private"],
-    // },
+    status: {
+      type: DataTypes.ENUM('public', 'private')
+   },
     // user: {
-    //   type: DataTypes._id,
+    //   type: DataTypes.ref,
     //   ref: "user",
     // },
   });
