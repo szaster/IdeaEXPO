@@ -27,6 +27,18 @@ footer {
     background-color: #C5E8EA;
     border-top: 1px solid #042f65;
 }
+.fa-small {
+    font-size: 16px !important;
+}
+
+.btn-float {
+    float: left;
+    margin-right: 10px;
+}
+
+.img-small {
+    width: 180px;
+}
 
 footer small {
     /* line-height: 40px; */
