@@ -25,10 +25,7 @@ module.exports = function (sequelize, DataTypes) {
     //   defaultValue: "Personal",
     //   // enum: ["public", "private"],
     // },
-    // user: {
-    //   type: DataTypes._id,
-    //   ref: "user",
-    // },
+    //
   });
 
   Idea.associate = function (models) {
