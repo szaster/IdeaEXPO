@@ -12,7 +12,6 @@ module.exports = function (sequelize, DataTypes) {
     title: {
       type: DataTypes.STRING,
       allowNull: false,
-      unique: true,
     },
     body: {
       type: DataTypes.TEXT,
@@ -25,17 +24,10 @@ module.exports = function (sequelize, DataTypes) {
     //   defaultValue: "Personal",
     //   // enum: ["public", "private"],
     // },
-    //
   });
 
   Idea.associate = function (models) {
-    //associating user with his ideas
-    Idea.belongsTo(models.user, {
-      // onDelete: "cascade",
-      foreignKey: {
-        allowNull: false,
-      },
-    });
+    Idea.belongsTo(models.user);
   };
 
   return Idea;

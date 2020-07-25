@@ -8,22 +8,18 @@ module.exports = function (sequelize, DataTypes) {
     googleId: {
       type: DataTypes.STRING,
       allowNull: false,
-      unique: true,
     },
     displayName: {
       type: DataTypes.STRING,
       allowNull: false,
-      unique: true,
     },
     firstName: {
       type: DataTypes.STRING,
       allowNull: false,
-      unique: true,
     },
     lastName: {
       type: DataTypes.STRING,
       allowNull: false,
-      unique: true,
     },
     image: {
       type: DataTypes.BLOB("long"),

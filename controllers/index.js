@@ -24,17 +24,16 @@ router.get("/", (req, res) => {
 //was async (req,res)
 router.get("/dashboard", ensureAuth, async (req, res) => {
   try {
-    const ideas = await db.user.findAll({ user: req.user.id });
+    const ideas = await db.idea.findAll({ where: { userId: req.user.id } });
+    const data = ideas.map((a) => a.dataValues);
     res.render("dashboard", {
       name: req.user.firstName,
-      ideas,
+      ideas: data,
     });
   } catch (err) {
     console.error(err);
     res.render("error/500");
   }
-  console.log("ideas ", ideas);
-  // res.render("error/500");
 });
 
 module.exports = router;

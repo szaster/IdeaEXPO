@@ -3,6 +3,7 @@ const router = express.Router();
 const { ensureAuth } = require("../config/middleware/isAuthenticated");
 
 const db = require("../models");
+const { assert } = require("chai");
 
 // @desc Show add page
 // @route GET /stories/add
@@ -17,10 +18,13 @@ router.post("/", ensureAuth, async (req, res) => {
   try {
     req.body.user = req.user.id;
     //creates a new idea
-    await db.idea.create(req.body, {
-      include: [{ model: User, as: "User" }],
-    }),
-      res.redirect("/dashboard");
+    console.log("New idea", req.body);
+    const result = await db.idea.create({
+      title: req.body.title,
+      body: req.body.body,
+      userId: req.body.user,
+    });
+    res.redirect("/dashboard");
   } catch (err) {
     console.error(err);
     res.render("error/500");
