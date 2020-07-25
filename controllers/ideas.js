@@ -4,8 +4,8 @@ const { ensureAuth } = require("../config/middleware/isAuthenticated");
 
 const db = require("../models");
 
-// @desc Show add page
-// @route GET /stories/add
+// @desc Display add page
+// @route GET /ideas/add
 router.get("/add", ensureAuth, (req, res) => {
   res.render("ideas/add");
 });
@@ -24,7 +24,7 @@ router.post("/", ensureAuth, async (req, res) => {
   }
 });
 
-// @description Show all ideas FETCH AND RENDER ideas
+// @description Display all ideas FETCH AND RENDER ideas
 // @route GET /ideas
 router.get("/", ensureAuth, async (req, res) => {
   try {
@@ -44,8 +44,8 @@ router.get("/", ensureAuth, async (req, res) => {
   }
 });
 
-// // @desc Show single story page
-// // @route GET /stories/id
+// // @desc Display single story page
+// // @route GET /ideas/id
 router.get("/:id", ensureAuth, async (req, res) => {
   try {
     let idea = await db.idea.findById(req.params.id).populate("user").lean();
@@ -54,7 +54,7 @@ router.get("/:id", ensureAuth, async (req, res) => {
       return res.render("error/404");
     }
 
-    res.render("ideas/show", {
+    res.render("ideas/display", {
       idea,
     });
   } catch (error) {
@@ -63,14 +63,14 @@ router.get("/:id", ensureAuth, async (req, res) => {
   }
 });
 
-// // @desc Show edit page
-// // @route GET /stories/edit/:id
+// // @desc Display edit page
+// // @route GET /ideas/edit/:id
 router.get("/edit/:id", ensureAuth, async (req, res) => {
   try {
     const idea = await db.idea
       .findOne({
         where: {
-          _id: req.params.id,
+          id: req.params.id,
         },
       })
       .lean();
@@ -93,7 +93,7 @@ router.get("/edit/:id", ensureAuth, async (req, res) => {
 });
 
 // // @desc Update story
-// // @route PUT /stories/:id
+// // @route PUT /ideas/:id
 router.put("/:id", ensureAuth, async (req, res) => {
   try {
     let idea = await db.idea.findById(req.params.id).lean();
@@ -106,7 +106,7 @@ router.put("/:id", ensureAuth, async (req, res) => {
       res.redirect("/ideas");
     } else {
       story = await db.idea.findOneAndUpdate(
-        { where: { _id: req.params.id } },
+        { where: { id: req.params.id } },
         req.body,
         {
           new: true,
@@ -123,10 +123,10 @@ router.put("/:id", ensureAuth, async (req, res) => {
 });
 
 // // @desc Delete story
-// // @route DELETE /stories/:id
+// // @route DELETE /ideas/:id
 router.delete("/:id", ensureAuth, async (req, res) => {
   try {
-    await db.idea.remove({ where: { _id: req.params.id } });
+    await db.idea.remove({ where: { id: req.params.id } });
     res.redirect("/dashboard");
   } catch (error) {
     console.error(err);
@@ -134,8 +134,8 @@ router.delete("/:id", ensureAuth, async (req, res) => {
   }
 });
 
-// @desc User stories
-// @route GET /stories/user/:userId
+// @desc User ideas
+// @route GET /ideas/user/:userId
 router.get("/user/:userId", ensureAuth, async (req, res) => {
   try {
     const ideas = await db.idea
