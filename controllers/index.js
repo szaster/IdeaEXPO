@@ -9,7 +9,7 @@ const {
   ensureUser,
 } = require("../config/middleware/isAuthenticated");
 
-const Idea = require("../models/");
+const db = require("../models");
 
 //   Login/Landing page
 //   GET /
@@ -20,35 +20,23 @@ router.get("/", (req, res) => {
 });
 //   Dashboard
 //   GET /dashboard
-
-// router.get("/dashboard", ensureAuth, (req, res) => {
-//     Idea.Post.findOne({
-//       where: {
-// 		name: req.user.firstName,
-// 		ideas,
-//       }
-//     })
-//       .then( (dbPost) => {
-//         res.json(dbPost);
-//       });
-//   });
-
-router.get("/dashboard", ensureAuth, async (req, res) => {
+//was async (req,res)
+router.get("/dashboard", ensureAuth, (req, res) => {
   res.render("dashboard", {
     name: req.user.firstName,
   });
-
   // try {
-  // 	// await
-  // 	const ideas = await Idea.find({ user: req.user.id });
-  // 	res.render("dashboard", {
-  // 		name: req.user.firstName,
-  // 		ideas,
-  // 	});
+  //   const ideas = await db.idea.find({ idea: req.idea._id });
+  //   res.render("dashboard", {
+  //     name: req.user.firstName,
+  //     ideas,
+  //   });
   // } catch (err) {
-  // 	console.error(err);
-  // 	res.render("error/500");
-  // }
+  // console.log("this is db.idea", db.idea);
+  // console.error(err);
+  // console.log("name ", name);
+  // console.log("ideas ", ideas);
+  // res.render("error/500");
 });
 
 module.exports = router;
