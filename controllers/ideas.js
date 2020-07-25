@@ -17,11 +17,10 @@ router.get("/add", ensureAuth, (req, res) => {
 router.post("/", ensureAuth, async (req, res) => {
   try {
     req.body.user = req.user.id;
-    //creates a new idea
-    console.log("New idea", req.body);
-    const result = await db.idea.create({
+    await db.idea.create({
       title: req.body.title,
       body: req.body.body,
+      status: req.body.status,
       userId: req.body.user,
     });
     res.redirect("/dashboard");
