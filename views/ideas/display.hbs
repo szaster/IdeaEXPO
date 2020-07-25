@@ -1,7 +1,7 @@
 <div class="row">
     <div class="col s12 m8">
         <h3> {{idea.title}}
-            <small>{{{editIcon idea.user user idea.id false}}}</small>
+            <small>{{{editIcon idea.user user idea._id false}}}</small>
         </h3>
         <div class="card idea">
             <div class="card-content">
@@ -19,8 +19,8 @@
                 <img src="{{idea.user.image}}" class="circle responsive-img img-small">
             </div>
             <div class="card-action">
-                <a href="/ideas/user/{{idea.user.id}}">More ideas from {{idea.user.firstName}}</a>
+                <a href="/ideas/user/{{idea.user._id}}">More ideas from {{idea.user.firstName}}</a>
             </div>
-        </div>    
+        </div>
     </div>
 </div>

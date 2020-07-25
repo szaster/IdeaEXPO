@@ -1,7 +1,7 @@
 <h3>Edit Idea</h3>
 <div class="row">
-    <form action="/ideas/{{idea.id}}" method="POST" class="col s12">
-        <input type="hidden" name="method" value="PUT">
+    <form action="/ideas/{{idea._id}}" method="POST" class="col s12">
+        <input type="hidden" name="_method" value="PUT">
         <div class="row">
             <div class="input-field">
                 <input type="text" id="title" name="title" value="{{idea.title}}">
@@ -11,8 +11,9 @@
 
         <div class="row">
             <div class="input-field">
-                <select id="status" name="status">
-                    {{#select idea.category}}
+                {{!-- <select id="status" name="status"> --}}
+                <select class="custom-select" id="status">
+                    {{#select idea.status}}
                     <option value="public">Public</option>
                     <option value="private">Private</option>
                     {{/select}}
@@ -23,7 +24,7 @@
 
         <div class="row">
             <div class="input-field">
-                <h5>Tell us your idea:</h5>
+                <h5>Share your idea:</h5>
                 <textarea id="body" name="body">{{idea.body}}</textarea>
             </div>
         </div>
