@@ -7,14 +7,20 @@ body {
     margin-bottom: 45px;
     background-color:  #C5E8EA;
 }
+
+/* ********** Intro ************ */
+.login-with-google{
+margin-left: 100px;
+}
+
 /* ********** Nav Bar ************ */
 nav {
-    background-color: transparent!important;
-    height: 70px;
+    height: 100px;
+    background-color: #00897b !important;
 }
 .icon{
     align-items: center;
-    margin-left: 50px;
+    margin-left: 80px;
 }
 /* ********** Side Nav ************ */
 
@@ -33,6 +39,10 @@ text-align: center;
 font-weight: bolder;
 }
 
+/* ********** Add Idea ************ */
+.add-idea{
+    font-weight: bolder;
+}
 footer {
     position: absolute;
     bottom: 0;
