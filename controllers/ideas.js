@@ -47,7 +47,7 @@ router.get("/", ensureAuth, async (req, res) => {
     const ideas = await db.idea.findAll({
       where: { status: "public" },
       // include: ["user"],
-      raw: true,
+      // raw: true,
     });
     const data = ideas.map((a) => a.dataValues);
     // .sort({ createdAt: "desc" });
