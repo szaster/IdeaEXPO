@@ -13,9 +13,8 @@ body {
     
 }
 
-.welcome-container {
-    margin: 20px !important;
-    margin-right: 20px!important;
+.user-name{
+text-align: center;
 }
 
 footer {
