@@ -3,12 +3,6 @@ const Moment = require("moment");
 
 module.exports = function (sequelize, DataTypes) {
   const Idea = sequelize.define("idea", {
-    // date: {
-    //   type: DataTypes.DATE,
-    //   get: function () {
-    //     return Moment(this.getDataValue("date")).format("MMMM Do, YYYY");
-    //   },
-    // },
     title: {
       type: DataTypes.STRING,
       allowNull: false,
@@ -27,16 +21,6 @@ module.exports = function (sequelize, DataTypes) {
     //   ref: "user",
     // },
   });
-
-  // Idea.associate = function (models) {
-  //   //associating user with his ideas
-  //   Idea.belongsTo(models.User, {
-  //     onDelete: "cascade",
-  //     foreignKey: {
-  //       allowNull: false,
-  //     },
-  //   });
-  // };
 
   return Idea;
 };
