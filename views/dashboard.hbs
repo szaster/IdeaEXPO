@@ -1,5 +1,5 @@
-<h3 class="user-name">Welcome {{name}}!</h3>
-<h5>Here are your ideas!</h5>
+<h3 class="user-name ">Welcome {{name}}!</h3>
+<h5 class="">Here are your ideas!</h5>
 {{#if ideas}}
 <table class="striped">
     <thead>
@@ -12,17 +12,17 @@
     <tbody>
         {{#each ideas}}
         <tr>
-            <td><a href="/ideas/{{id}}">{{title}}</a></td>
+            <td><a class="title" href="/ideas/{{id}}">{{title}}</a></td>
             <td>{{formatDate createdAt "MMMM Do YYYY, h:mm:ss a"}}</td>
             <td><span clas="dash-status">{{status}}</span></td>
             <td>
-                <a href="/ideas/edit/{{id}}" class="btn btn-float">
-                    <i class="fas fa-edit"></i>
+                <a href="/ideas/edit/{{id}}" class="teal darken-1 btn btn-float">
+                    <i class="far fa-edit"></i>
                 </a>
                 <form action="/ideas/{{id}}" method="POST" id="delete-form">
                     <input type="hidden" name="_method" value="DELETE">
                     <button type="submit" class="btn red">
-                        <i class="fas fa-trash"></i>
+                        <i class="far fa-trash-alt"></i>
                     </button>
                 </form>
             </td>

@@ -20,7 +20,7 @@ app.use(express.json());
 app.use(express.static("public"));
 // We need to use sessions to keep track of our user's login status
 app.use(
-  session({ secret: "keyboard cat", resave: true, saveUninitialized: true })
+	session({ secret: "keyboard cat", resave: true, saveUninitialized: true })
 );
 //Passport middleware
 app.use(passport.initialize());
@@ -29,45 +29,45 @@ app.use(passport.session());
 
 //Setting global variable
 app.use(function (req, res, next) {
-  res.locals.user = req.user || null;
-  next();
+	res.locals.user = req.user || null;
+	next();
 });
 
 // Method override
 app.use(
-  methodOverride(function (req, res) {
-    if (req.body && typeof req.body === "object" && "_method" in req.body) {
-      // look in urlencoded POST bodies and delete it
-      let method = req.body._method;
-      delete req.body._method;
-      return method;
-    }
-  })
+	methodOverride(function (req, res) {
+		if (req.body && typeof req.body === "object" && "_method" in req.body) {
+			// look in urlencoded POST bodies and delete it
+			let method = req.body._method;
+			delete req.body._method;
+			return method;
+		}
+	})
 );
 
 // Handlebars Helpers
 const {
-  formatDate,
-  stripTags,
-  truncate,
-  editIcon,
-  select,
+	formatDate,
+	stripTags,
+	truncate,
+	editIcon,
+	select,
 } = require("./helpers/hbs");
 
 // Handlebars
 app.engine(
-  ".hbs",
-  exphbs({
-    helpers: {
-      formatDate,
-      stripTags,
-      truncate,
-      editIcon,
-      select,
-    },
-    defaultLayout: "main",
-    extname: ".hbs",
-  })
+	".hbs",
+	exphbs({
+		helpers: {
+			formatDate,
+			stripTags,
+			truncate,
+			editIcon,
+			select,
+		},
+		defaultLayout: "main",
+		extname: ".hbs",
+	})
 );
 app.set("view engine", ".hbs");
 
@@ -78,11 +78,11 @@ app.use("/ideas", require("./controllers/ideas"));
 
 // Syncing our database and logging a message to the user upon success
 db.sequelize.sync().then(() => {
-  app.listen(PORT, () => {
-    console.log(
-      "==> 🌎  Listening on port %s. Visit http://localhost:%s/ in your browser.",
-      PORT,
-      PORT
-    );
-  });
+	app.listen(PORT, () => {
+		console.log(
+			"==> 🌎  Listening on port %s. Visit http://localhost:%s/ in your browser.",
+			PORT,
+			PORT
+		);
+	});
 });

@@ -1,46 +1,72 @@
 html {
-    position: relative;
-    min-height: 100%;
-}
-nav {
-    background-color: transparent!important;
+	position: relative;
+	min-height: 100%;
 }
 
 body {
-    margin-bottom: 45px;
-    background-color:  white;
-
-    
+	margin-bottom: 45px;
+	background-color: #c5e8ea;
 }
 
-.user-name{
-text-align: center;
+/* ********** Intro ************ */
+.login-with-google {
+	margin-left: 100px;
 }
 
+/* ********** Nav Bar ************ */
+nav {
+	height: 100px;
+	background-color: #00897b !important;
+}
+.icon {
+	align-items: center;
+	margin-left: 80px;
+}
+/* ********** Side Nav ************ */
+
+.sidenav li > a {
+	color: white !important;
+	font-weight: bolder !important;
+}
+
+/* ********** Dashboard ************ */
+.title {
+	font-weight: bolder;
+	font-size: medium;
+}
+.user-name {
+	text-align: center;
+	font-weight: bolder;
+}
+
+/* ********** Add Idea ************ */
+.add-idea {
+	font-weight: bolder;
+}
 footer {
-    position: absolute;
-    bottom: 0;
-    /* height: 20px; */
-    text-align: center;
-    width: 100%;
-    background-color: #C5E8EA;
-    border-top: 1px solid #042f65;
+	position: absolute;
+	bottom: 0;
+	/* height: 20px; */
+	text-align: center;
+	width: 100%;
+	background-color: #c5e8ea;
+	border-top: 1px solid #042f65;
 }
 .fa-small {
-    font-size: 16px !important;
+	font-size: 16px !important;
 }
 
 .btn-float {
-    float: left;
-    margin-right: 10px;
+	float: left;
+	margin-right: 10px;
 }
 
 .img-small {
-    width: 180px;
+	width: 180px;
 }
 
 footer small {
-    /* line-height: 40px; */
-    color: #042f65;
-    font-size: 5px;
+	/* line-height: 40px; */
+	color: #042f65;
+	font-size: 5px;
 }
