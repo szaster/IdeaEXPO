@@ -11,7 +11,6 @@ router.get("/add", ensureAuth, (req, res) => {
 });
 
 // @desc Process add form
-
 // @route POST /ideas
 router.post("/", ensureAuth, async (req, res) => {
   try {
@@ -30,10 +29,9 @@ router.post("/", ensureAuth, async (req, res) => {
 });
 
 // // @desc Delete story
-// // @route DELETE /ideas/:id
+// // @route DELETE /delete/:id
 router.get("/delete/:id", ensureAuth, async (req, res) => {
   try {
-    console.log("AAAAAAAA");
     await db.idea.destroy({ where: { id: req.params.id } });
     res.redirect("/dashboard");
   } catch (error) {
@@ -42,41 +40,47 @@ router.get("/delete/:id", ensureAuth, async (req, res) => {
   }
 });
 
-// @description Show all ideas
+// @description Show all public ideas
 // @route GET /ideas/////current path///
-// router.get("/", ensureAuth, async (req, res) => {
-//   try {
-//     const ideas = await db.idea
-//       .findAll({ status: "public" })
-//       .sort({ createdAt: "desc" });
+router.get("/", ensureAuth, async (req, res) => {
+  try {
+    const ideas = await db.idea.findAll({
+      where: { status: "public" },
+      // include: ["user"],
+      raw: true,
+    });
+    const data = ideas.map((a) => a.dataValues);
+    // .sort({ createdAt: "desc" });
 
-//     res.render("ideas/index", {
-//       ideas,
-//     });
-//   } catch (error) {
-//     console.error(err);
-//     res.render("error/500");
-//   }
-// });
+    // res.render("ideas/index", {
+    res.render("dashboard_pblc", {
+      name: req.user.firstName,
+      ideas: data,
+    });
+  } catch (error) {
+    console.error(err);
+    res.render("error/500");
+  }
+});
 
 // // @desc Show single story page
 // // @route GET /stories/id
-// router.get("/:id", ensureAuth, async (req, res) => {
-//   try {
-//     let idea = await db.idea.findByPk(req.params.id).populate("user");
+router.get("/:id", ensureAuth, async (req, res) => {
+  try {
+    let idea = await db.idea.findByPk(req.params.id).populate("user");
 
-//     if (!idea) {
-//       return res.render("error/404");
-//     }
+    if (!idea) {
+      return res.render("error/404");
+    }
 
-//     res.render("ideas/display", {
-//       idea,
-//     });
-//   } catch (error) {
-//     console.error(err);
-//     res.render("error/404");
-//   }
-// });
+    res.render("ideas/display", {
+      idea,
+    });
+  } catch (error) {
+    console.error(err);
+    res.render("error/404");
+  }
+});
 
 // // @desc Show edit page
 // // @route GET /stories/edit/:id
@@ -137,24 +141,26 @@ router.get("/delete/:id", ensureAuth, async (req, res) => {
 //   }
 // });
 
-// @desc User stories
-// @route GET /stories/user/:userId
-// router.get("/user/:userId", ensureAuth, async (req, res) => {
-//   try {
-//     const ideas = await db.idea.findAll({
-//       user: req.params.userId,
-//       status: "public",
-//     });
-//     // .populate("user");
-//     // .lean();
+// @desc User ideas
+// @route GET /ideas/user/:userId
+router.get("/user/:userId", ensureAuth, async (req, res) => {
+  try {
+    const ideas = await db.idea.findAll({
+      where: {
+        user: req.params.userId,
+        status: "public",
+      },
+      include: ["user"],
+      raw: true,
+    });
 
-//     res.render("ideas/index", {
-//       ideas,
-//     });
-//   } catch (error) {
-//     console.error(err);
-//     res.render("error/404");
-//   }
-// });
+    res.render("ideas/index", {
+      ideas,
+    });
+  } catch (error) {
+    console.error(err);
+    res.render("error/404");
+  }
+});
 
 module.exports = router;

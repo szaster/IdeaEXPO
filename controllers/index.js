@@ -20,8 +20,7 @@ router.get("/", (req, res) => {
   });
 });
 //   Dashboard
-//   GET /dashboard// GET all the ideas by
-
+//   GET /dashboard// GET all the ideas by user
 router.get("/dashboard", ensureAuth, async (req, res) => {
   try {
     const ideas = await db.idea.findAll({ where: { userId: req.user.id } });
