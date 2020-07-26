@@ -14,13 +14,28 @@ module.exports = function (sequelize, DataTypes) {
       unique: false,
     },
     status: {
-      type: DataTypes.ENUM('public', 'private')
-   },
+      type: DataTypes.STRING,
+      allowNull: false,
+      defaultValue: "public",
+      enum: ["public", "private"],
+    },
     // user: {
     //   type: DataTypes.ref,
     //   ref: "user",
     // },
   });
 
+  // Idea.associate = function (models) {
+  //   //associating user with his ideas
+  //   Idea.belongsTo(models.User, {
+  //     onDelete: "cascade",
+  //     foreignKey: {
+  //       allowNull: false,
+  //     },
+  //   });
+  // };
+  Idea.associate = function (models) {
+    Idea.belongsTo(models.user);
+  };
   return Idea;
 };

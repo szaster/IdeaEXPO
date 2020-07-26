@@ -40,7 +40,12 @@ module.exports = function (sequelize, DataTypes) {
   //     },
   //   });
   // };
-
+  User.associate = function (models) {
+    //associating user with his posts
+    User.hasMany(models.idea, {
+      onDelete: "cascade",
+    });
+  };
   return User;
 };
 // module.exports = sequelize.model("user", UserSchema);

@@ -27,6 +27,12 @@ app.use(passport.initialize());
 // integrate passport with our express session middleware
 app.use(passport.session());
 
+//Setting global variable
+app.use(function (req, res, next) {
+  res.locals.user = req.user || null;
+  next();
+});
+
 // Method override
 app.use(
   methodOverride(function (req, res) {
