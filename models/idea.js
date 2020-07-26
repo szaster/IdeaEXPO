@@ -19,10 +19,8 @@ module.exports = function (sequelize, DataTypes) {
       enum: ["public", "private"],
     },
   });
-
   Idea.associate = function (models) {
     Idea.belongsTo(models.user);
   };
-
   return Idea;
 };

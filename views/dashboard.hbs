@@ -19,12 +19,9 @@
                 <a href="/ideas/edit/{{id}}" class="btn btn-float">
                     <i class="fas fa-edit"></i>
                 </a>
-                <form action="/ideas/{{id}}" method="POST" id="delete-form">
-                    <input type="hidden" name="method" value="DELETE">
-                    <button type="submit" class="btn-danger">
-                        <i class="fas fa-trash"></i>
-                    </button>
-                </form>
+                <a href="/ideas/delete/{{id}}" class="btn red">
+                    <i class="fas fa-trash"></i>
+                </a>
             </td>
         </tr>
         {{/each}}

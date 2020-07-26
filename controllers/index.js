@@ -20,12 +20,15 @@ router.get("/", (req, res) => {
   });
 });
 //   Dashboard
-//   GET /dashboard// all the ideas
-//was async (req,res)
+//   GET /dashboard// GET all the ideas by
+
 router.get("/dashboard", ensureAuth, async (req, res) => {
   try {
     const ideas = await db.idea.findAll({ where: { userId: req.user.id } });
     const data = ideas.map((a) => a.dataValues);
+    // console.log("ideas object:", ideas),
+    // console.log("db.object:", db.idea),
+    // console.log("data object:", data)
     res.render("dashboard", {
       name: req.user.firstName,
       ideas: data,

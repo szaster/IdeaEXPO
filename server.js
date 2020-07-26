@@ -33,16 +33,16 @@ app.engine(".hbs", exphbs({ extname: ".hbs" }));
 app.set("view engine", ".hbs");
 
 // Method override
-app.use(
-  methodOverride(function (req, res) {
-    if (req.body && typeof req.body === "object" && "_method" in req.body) {
-      // look in urlencoded POST bodies and delete it
-      let method = req.body._method;
-      delete req.body._method;
-      return method;
-    }
-  })
-);
+// app.use(
+//   methodOverride(function (req, res) {
+//     if (req.body && typeof req.body === "object" && "_method" in req.body) {
+//       // look in urlencoded POST bodies and delete it
+//       let method = req.body._method;
+//       delete req.body._method;
+//       return method;
+//     }
+//   })
+// );
 
 // Handlebars Helpers
 const {
@@ -53,7 +53,7 @@ const {
   select,
 } = require("./helpers/hbs");
 
-// Handlebars
+// Handlebars;
 app.engine(
   ".hbs",
   exphbs({

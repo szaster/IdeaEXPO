@@ -3,10 +3,9 @@ const router = express.Router();
 const { ensureAuth } = require("../config/middleware/isAuthenticated");
 
 const db = require("../models");
-const { assert } = require("chai");
 
 // @desc Show add page
-// @route GET /stories/add
+// @route GET /ideas/add
 router.get("/add", ensureAuth, (req, res) => {
   res.render("ideas/add");
 });
@@ -30,6 +29,19 @@ router.post("/", ensureAuth, async (req, res) => {
   }
 });
 
+// // @desc Delete story
+// // @route DELETE /ideas/:id
+router.get("/delete/:id", ensureAuth, async (req, res) => {
+  try {
+    console.log("AAAAAAAA");
+    await db.idea.destroy({ where: { id: req.params.id } });
+    res.redirect("/dashboard");
+  } catch (error) {
+    console.error(err);
+    return res.render("error/500");
+  }
+});
+
 // @description Show all ideas
 // @route GET /ideas/////current path///
 // router.get("/", ensureAuth, async (req, res) => {
@@ -44,18 +56,6 @@ router.post("/", ensureAuth, async (req, res) => {
 //   } catch (error) {
 //     console.error(err);
 //     res.render("error/500");
-//   }
-// });
-
-// // @desc Delete story
-// // @route DELETE /stories/:id
-// router.delete("/:id", ensureAuth, async (req, res) => {
-//   try {
-//     await db.idea.destroy({ where: { id: req.params.id } });
-//     res.redirect("/dashboard");
-//   } catch (error) {
-//     console.error(err);
-//     return res.render("error/500");
 //   }
 // });
 
