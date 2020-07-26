@@ -10,6 +10,11 @@ body {
 /* ********** Nav Bar ************ */
 nav {
     background-color: transparent!important;
+    height: 70px;
+}
+.icon{
+    align-items: center;
+    margin-left: 50px;
 }
 /* ********** Side Nav ************ */
 

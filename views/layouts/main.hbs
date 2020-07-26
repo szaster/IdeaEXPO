@@ -32,8 +32,7 @@
 
         M.Sidenav.init(document.querySelector('.sidenav'))
         M.FormSelect.init(document.querySelector('#status'))
-        M.Sidenav.getInstance(elem);
-        CKEDITOR.replace('body', {
+        CKEDITOR.replace('body', 'title', {
              plugins: 'wysiwygarea, toolbar, basicstyles, link'
          })
     
