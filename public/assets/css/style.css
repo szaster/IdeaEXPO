@@ -2,19 +2,30 @@ html {
     position: relative;
     min-height: 100%;
 }
-nav {
-    background-color: transparent!important;
-}
 
 body {
     margin-bottom: 45px;
-    background-color:  white;
+    background-color:  #C5E8EA;
+}
+/* ********** Nav Bar ************ */
+nav {
+    background-color: transparent!important;
+}
+/* ********** Side Nav ************ */
 
-    
+.sidenav li>a{
+    color: white !important;
+    font-weight: bolder !important;
 }
 
+/* ********** Dashboard ************ */
+.title{
+    font-weight: bolder;
+    font-size: medium;
+}
 .user-name{
 text-align: center;
+font-weight: bolder;
 }
 
 footer {
