@@ -2,18 +2,30 @@ html {
   position: relative;
   min-height: 100%;
 }
-nav {
-  background-color: transparent !important;
-}
 
 body {
   margin-bottom: 45px;
-  background-color: white;
+  background-color: #c5e8ea;
+}
+/* ********** Nav Bar ************ */
+nav {
+  background-color: transparent !important;
+}
+/* ********** Side Nav ************ */
+
+.sidenav li > a {
+  color: white !important;
+  font-weight: bolder !important;
 }
 
-.welcome-container {
-  margin: 20px !important;
-  margin-right: 20px !important;
+/* ********** Dashboard ************ */
+.title {
+  font-weight: bolder;
+  font-size: medium;
+}
+.user-name {
+  text-align: center;
+  font-weight: bolder;
 }
 
 footer {
@@ -24,6 +36,18 @@ footer {
   width: 100%;
   background-color: #c5e8ea;
   border-top: 1px solid #042f65;
+}
+.fa-small {
+  font-size: 16px !important;
+}
+
+.btn-float {
+  float: left;
+  margin-right: 10px;
+}
+
+.img-small {
+  width: 180px;
 }
 
 footer small {

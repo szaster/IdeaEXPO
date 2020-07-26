@@ -64,14 +64,10 @@ router.get("/", ensureAuth, async (req, res) => {
 });
 
 // // @desc Show single story page
-// // @route GET /stories/id
+// // @route GET /ideas/id
 router.get("/:id", ensureAuth, async (req, res) => {
   try {
-    let idea = await db.idea.findByPk(req.params.id).populate("user");
-
-    if (!idea) {
-      return res.render("error/404");
-    }
+    let idea = await db.idea.findByPk(req.params.id);
 
     res.render("ideas/display", {
       idea,

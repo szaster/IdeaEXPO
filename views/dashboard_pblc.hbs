@@ -1,12 +1,12 @@
 <h3>Welcome {{name}}!</h3>
-<h5>Here are public business ideas from user all over the planet! haha!</h5>
+<h5>Here are public business ideas from people all over the World!</h5>
 {{#if ideas}}
 <table>
     <thead>
         <tr>
             <th>Title</th>
             <th>Date</th>
-            <th>Status</th>
+            <th></th>
         </tr>
     </thead>
     <tbody>
@@ -14,7 +14,7 @@
         <tr>
             <td><a href="/ideas/{{id}}">{{title}}</a></td>
             <td>{{formatDate createdAt "MMMM Do YYYY, h:mm a"}}</td>
-            <td><span clas="dash-status">{{status}}</span></td>
+            {{!-- <td><span clas="dash-status">{{status}}</span></td> --}}
             <td>
                 {{!-- <a href="/ideas/edit/{{id}}" class="btn btn-float">
                     <i class="fas fa-edit"></i>
