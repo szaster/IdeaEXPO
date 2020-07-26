@@ -147,7 +147,7 @@ router.get("/user/:userId", ensureAuth, async (req, res) => {
   try {
     const ideas = await db.idea.findAll({
       where: {
-        userId: req.params.userId,
+        user: req.params.userId,
         status: "public",
       },
       include: ["user"],
