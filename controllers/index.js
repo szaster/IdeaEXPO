@@ -14,12 +14,13 @@ const db = require("../models");
 
 //   Login/Landing page
 //   GET /
-router.get("/", (req, res) => {
+router.get("/", ensureUser, (req, res) => {
   res.render("intro", {
     layout: "intro",
   });
 });
 //   Dashboard
+<<<<<<< HEAD
 //   GET /dashboard// GET all the ideas by user
 router.get("/dashboard", ensureAuth, async (req, res) => {
   try {
@@ -28,6 +29,18 @@ router.get("/dashboard", ensureAuth, async (req, res) => {
     // console.log("ideas object:", ideas),
     // console.log("db.object:", db.idea),
     // console.log("data object:", data)
+=======
+//   GET /dashboard
+router.get("/dashboard", ensureAuth, async (req, res) => {
+  try {
+    const ideas = await db.idea.findAll({
+      where: {
+        userId: req.user.id,
+      },
+      raw: true,
+    });
+
+>>>>>>> master
     res.render("dashboard", {
       name: req.user.firstName,
       ideas: data,

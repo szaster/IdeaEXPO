@@ -29,10 +29,14 @@ app.use(passport.initialize());
 // integrate passport with our express session middleware
 app.use(passport.session());
 
-app.engine(".hbs", exphbs({ extname: ".hbs" }));
-app.set("view engine", ".hbs");
+//Setting global variable
+app.use(function (req, res, next) {
+  res.locals.user = req.user || null;
+  next();
+});
 
 // Method override
+<<<<<<< HEAD
 // app.use(
 //   methodOverride(function (req, res) {
 //     if (req.body && typeof req.body === "object" && "_method" in req.body) {
@@ -43,6 +47,18 @@ app.set("view engine", ".hbs");
 //     }
 //   })
 // );
+=======
+app.use(
+  methodOverride(function (req, res) {
+    if (req.body && typeof req.body === "object" && "method" in req.body) {
+      // look in urlencoded POST bodies and delete it
+      let method = req.body.method;
+      delete req.body.method;
+      return method;
+    }
+  })
+);
+>>>>>>> master
 
 // Handlebars Helpers
 const {

@@ -1,5 +1,5 @@
-<h3>Welcome {{name}}!</h3>
-<h5>Here are your ideas!</h5>
+<h3 class="user-name ">Welcome {{name}}!</h3>
+<h5 class="">Here are your ideas!</h5>
 {{#if ideas}}
 <table class="striped">
     <thead>
@@ -12,6 +12,7 @@
     <tbody>
         {{#each ideas}}
         <tr>
+<<<<<<< HEAD
             <td><a href="/ideas/{{id}}">{{title}}</a></td>
             <td>{{formatDate createdAt "MMMM Do YYYY, h:mm a"}}</td>
             <td><span clas="dash-status">{{status}}</span></td>
@@ -22,6 +23,21 @@
                 <a href="/ideas/delete/{{id}}" class="btn red">
                     <i class="fas fa-trash"></i>
                 </a>
+=======
+            <td><a class="title" href="/ideas/{{id}}">{{title}}</a></td>
+            <td>{{formatDate createdAt "MMMM Do YYYY, h:mm:ss a"}}</td>
+            <td><span clas="dash-status">{{status}}</span></td>
+            <td>
+                <a href="/ideas/edit/{{id}}" class="teal darken-1 btn btn-float">
+                    <i class="far fa-edit"></i>
+                </a>
+                <form action="/ideas/{{id}}" method="POST" id="delete-form">
+                    <input type="hidden" name="method" value="DELETE">
+                    <button type="submit" class="btn red">
+                        <i class="far fa-trash-alt"></i>
+                    </button>
+                </form>
+>>>>>>> master
             </td>
         </tr>
         {{/each}}

@@ -2,7 +2,7 @@ const moment = require("moment");
 
 module.exports = {
   formatDate: function (date, format) {
-    return moment(date).utc().format(format);
+    return moment(date).local().format(format);
   },
   truncate: function (str, len) {
     if (str.length > len && str.length > 0) {
@@ -17,8 +17,13 @@ module.exports = {
   stripTags: function (input) {
     return input.replace(/<(?:.|\n)*?>/gm, "");
   },
+<<<<<<< HEAD
   editIcon: function (storyUser, loggedUser, ideaId, floating = true) {
     if (storyUser.id.toString() == loggedUser.id.toString()) {
+=======
+  editIcon: function (ideaUser, loggedUser, ideaId, floating = true) {
+    if (ideaUser.id.toString() == loggedUser.id.toString()) {
+>>>>>>> master
       if (floating) {
         return `<a href="/ideas/edit/${ideaId}" class="btn-floating halfway-fab blue"><i class="fas fa-edit fa-small"></i></a>`;
       } else {

@@ -1,7 +1,14 @@
+<<<<<<< HEAD
 <h3><i class=" far fa-edit"></i> Edit Idea</h3>
 <div class="row">
     <form action="/ideas/{{idea.id}}" method="POST" class="col s12">
         <input type="hidden" name="_method" value="PUT">
+=======
+<h3 class="red-text"><i class=" far fa-edit"></i> Edit Idea</h3>
+<div class="row">
+    <form action="/ideas/{{idea.id}}" method="POST" class="col s12">
+        <input type="hidden" name="method" value="PUT">
+>>>>>>> master
         <div class="row">
             <div class="input-field">
                 <input type="text" id="title" name="title" value="{{idea.title}}">
@@ -11,7 +18,6 @@
 
         <div class="row">
             <div class="input-field">
-                {{!-- <select id="status" name="status"> --}}
                 <select class="custom-select" id="status">
                     {{#select idea.status}}
                     <option value="public">Public</option>
@@ -30,7 +36,7 @@
         </div>
 
         <div class="row">
-            <input type="submit" value="Save" class="btn">
+            <input type="submit" value="Save" class="btn teal darken-1">
             <a href="/dashboard" class="btn orange">Cancel</a>
         </div>
     </form>
