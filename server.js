@@ -19,7 +19,7 @@ const app = express();
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
-app.use(express.static("public"));
+app.use(express.static(path.join(__dirname, "/public")));
 // We need to use sessions to keep track of our user's login status
 app.use(
   session({ secret: "keyboard cat", resave: true, saveUninitialized: true })
@@ -69,6 +69,7 @@ app.engine(
     },
     defaultLayout: "main",
     extname: ".hbs",
+    layoutsDir: path.join(__dirname, "views/layouts"),
   })
 );
 app.set("view engine", ".hbs");
