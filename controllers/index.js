@@ -20,17 +20,7 @@ router.get("/", ensureUser, (req, res) => {
   });
 });
 //   Dashboard
-<<<<<<< HEAD
 //   GET /dashboard// GET all the ideas by user
-router.get("/dashboard", ensureAuth, async (req, res) => {
-  try {
-    const ideas = await db.idea.findAll({ where: { userId: req.user.id } });
-    const data = ideas.map((a) => a.dataValues);
-    // console.log("ideas object:", ideas),
-    // console.log("db.object:", db.idea),
-    // console.log("data object:", data)
-=======
-//   GET /dashboard
 router.get("/dashboard", ensureAuth, async (req, res) => {
   try {
     const ideas = await db.idea.findAll({
@@ -39,11 +29,9 @@ router.get("/dashboard", ensureAuth, async (req, res) => {
       },
       raw: true,
     });
-
->>>>>>> master
     res.render("dashboard", {
       name: req.user.firstName,
-      ideas: data,
+      ideas,
     });
   } catch (err) {
     console.error(err);

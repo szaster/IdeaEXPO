@@ -12,18 +12,6 @@
     <tbody>
         {{#each ideas}}
         <tr>
-<<<<<<< HEAD
-            <td><a href="/ideas/{{id}}">{{title}}</a></td>
-            <td>{{formatDate createdAt "MMMM Do YYYY, h:mm a"}}</td>
-            <td><span clas="dash-status">{{status}}</span></td>
-            <td>
-                <a href="/ideas/edit/{{id}}" class="btn btn-float">
-                    <i class="fas fa-edit"></i>
-                </a>
-                <a href="/ideas/delete/{{id}}" class="btn red">
-                    <i class="fas fa-trash"></i>
-                </a>
-=======
             <td><a class="title" href="/ideas/{{id}}">{{title}}</a></td>
             <td>{{formatDate createdAt "MMMM Do YYYY, h:mm:ss a"}}</td>
             <td><span clas="dash-status">{{status}}</span></td>
@@ -37,7 +25,6 @@
                         <i class="far fa-trash-alt"></i>
                     </button>
                 </form>
->>>>>>> master
             </td>
         </tr>
         {{/each}}

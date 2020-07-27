@@ -39,10 +39,8 @@ router.get("/", ensureAuth, async (req, res) => {
       raw: true,
     });
 
-    // res.render("ideas/index", {
-    res.render("dashboard_pblc", {
-      name: req.user.firstName,
-      ideas: data,
+    res.render("ideas/index", {
+      ideas,
     });
   } catch (err) {
     console.error(err);
@@ -54,7 +52,8 @@ router.get("/", ensureAuth, async (req, res) => {
 // @route GET /ideas/id
 router.get("/:id", ensureAuth, async (req, res) => {
   try {
-    let idea = await db.idea.findByPk(req.params.id, {
+    let idea = await db.idea.findOne({
+      where: { id: req.params.id },
       include: ["user"],
       raw: true,
     });
@@ -105,9 +104,9 @@ router.put("/:id", ensureAuth, async (req, res) => {
       raw: true,
     });
 
-//     if (!idea) {
-//       return res.render("error/404");
-//     }
+    if (!idea) {
+      return res.render("error/404");
+    }
 
     // if (idea.user != req.user.id) {
     //   res.redirect("/ideas");

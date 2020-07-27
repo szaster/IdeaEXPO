@@ -33,9 +33,5 @@ module.exports = function (sequelize, DataTypes) {
       onDelete: "cascade",
     });
   };
-<<<<<<< HEAD
-
-=======
->>>>>>> master
   return User;
 };
