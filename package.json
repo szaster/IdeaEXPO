@@ -3,9 +3,6 @@
   "version": "1.0.0",
   "description": "## Live Site",
   "main": "server.js",
-  "engines": {
-    "node": "12.11.1"
-  },
   "scripts": {
     "test": "npm run lint",
     "start": "node server.js",
