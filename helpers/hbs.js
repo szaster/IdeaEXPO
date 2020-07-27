@@ -17,17 +17,17 @@ module.exports = {
   stripTags: function (input) {
     return input.replace(/<(?:.|\n)*?>/gm, "");
   },
-  editIcon: function (ideaUser, loggedUser, ideaId, floating = true) {
-    if (ideaUser.id.toString() == loggedUser.id.toString()) {
-      if (floating) {
-        return `<a href="/ideas/edit/${ideaId}" class="btn-floating halfway-fab blue"><i class="fas fa-edit fa-small"></i></a>`;
-      } else {
-        return `<a href="/ideas/edit/${ideaId}"><i class="fas fa-edit"></i></a>`;
-      }
-    } else {
-      return "";
-    }
-  },
+  // editIcon: function (ideaUser, loggedUser, ideaId, floating = true) {
+  //   if (ideaUser.id.toString() == loggedUser.id.toString()) {
+  //     if (floating) {
+  //       return `<a href="/ideas/edit/${ideaId}" class="btn-floating halfway-fab blue"><i class="fas fa-edit fa-small"></i></a>`;
+  //     } else {
+  //       return `<a href="/ideas/edit/${ideaId}"><i class="fas fa-edit"></i></a>`;
+  //     }
+  //   } else {
+  //     return "";
+  //   }
+  // },
   select: function (selected, options) {
     return options
       .fn(this)
