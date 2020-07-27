@@ -2,6 +2,7 @@ const moment = require("moment");
 
 module.exports = {
   formatDate: function (date, format) {
+    //local() changed time to local time
     return moment(date).local().format(format);
   },
   truncate: function (str, len) {

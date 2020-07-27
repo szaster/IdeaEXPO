@@ -19,6 +19,13 @@ router.get("/", ensureUser, (req, res) => {
     layout: "intro",
   });
 });
+
+//  About/About Me page
+//  GET/
+router.get("/views/about", ensureUser, (req, res) => {
+  res.render("about", { layout: "about" });
+});
+
 //   Dashboard
 //   GET /dashboard// GET all the ideas by user
 router.get("/dashboard", ensureAuth, async (req, res) => {
