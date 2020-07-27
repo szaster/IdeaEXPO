@@ -107,3 +107,21 @@ footer {
   font-size: 12px;
   align-items: center;
 }
+
+/* ---------------------------------------------- */
+/*                    ABOUT                       */
+/* ---------------------------------------------- */
+.card-dev {
+  background-color: rgba(126, 199, 199, 0.829);
+  text-align: center;
+  border: lightcoral;
+  border-style: solid;
+  padding: 2rem 2rem;
+  width: 300px;
+  margin-top: 2rem;
+  display: inline-block;
+}
+
+.all-cards {
+  background-color: white;
+}
