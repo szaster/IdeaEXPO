@@ -1,10 +1,9 @@
 <div class="row">
     <div class="col s12 m8">
-        {{!-- <h3> {{idea.title}} --}}
-        </h3>
         <div class="card idea">
             <div class="card-content">
                 <span class="card-title">
+                    <h3>{{title}}</h3>
                     {{formatDate  date "MMMM Do YYYY, h:mm:ss a"}}
                 </span>
                 {{{idea.body}}}
@@ -14,11 +13,13 @@
     <div class="col s12 m4">
         <div class="card center-align">
             <div class="card-content">
-                <span class="card-title">{{idea.user.displayName}}</span>
-                <img src="{{images}}" class="circle responsive-img img-small">
+                <span class="card-title">{{name}}</span>
+                <img src="{{image}}" class="circle responsive-img img-small">
+            </div>
+            <div class="card-action" <a href=user/{{userId}}">More ideas from {{firstName}}</a>
             </div>
             <div class="card-action">
-                <a href="/ideas/user/{{idea.user.id}}">More ideas from {{idea.user.firstName}}</a>
+                <a href="#">Contact {{firstName}} <i class="fa fa-envelope" style="color:rgb(73, 126, 196)"></i></a>
             </div>
         </div>
     </div>
