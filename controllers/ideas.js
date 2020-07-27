@@ -38,12 +38,29 @@ router.get("/", ensureAuth, async (req, res) => {
       include: ["user"],
       raw: true,
     });
-
-    res.render("ideas/index", {
-      ideas,
+    console.log("Ideas", ideas);
+    const hbIdeas = ideas.map((idea) => {
+      return {
+        title: idea.title,
+        id: idea.id,
+        userId: idea.userId,
+        name: idea["user.firstName"] + " " + idea["user.lastName"],
+        image: idea["user.image"],
+      };
     });
+
+    // data is an object conforming to format used by handlebars public page:
+    // 1. Constains array called ideas
+    // 2. Each element of array has name, id, userId, image, and title.
+    const data = { ideas: hbIdeas };
+
+    console.log(data);
+
+    // data for public page
+    res.render("ideas/public", data);
   } catch (err) {
     console.error(err);
+    console.log("all users firstnames", names);
     res.render("error/500");
   }
 });
@@ -52,7 +69,8 @@ router.get("/", ensureAuth, async (req, res) => {
 // @route GET /ideas/id
 router.get("/:id", ensureAuth, async (req, res) => {
   try {
-    let idea = await db.idea.findByPk(req.params.id, {
+    let idea = await db.idea.findOne({
+      where: { id: req.params.id },
       include: ["user"],
       raw: true,
     });

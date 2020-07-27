@@ -1,3 +1,4 @@
+// @file desc: Authorizatin middleware and dashboard ideas file
 // Requiring path to so we can use relative routes to our HTML files
 const express = require("express");
 const router = express.Router();
@@ -19,7 +20,7 @@ router.get("/", ensureUser, (req, res) => {
   });
 });
 //   Dashboard
-//   GET /dashboard
+//   GET /dashboard// GET all the ideas by user
 router.get("/dashboard", ensureAuth, async (req, res) => {
   try {
     const ideas = await db.idea.findAll({
@@ -28,7 +29,6 @@ router.get("/dashboard", ensureAuth, async (req, res) => {
       },
       raw: true,
     });
-
     res.render("dashboard", {
       name: req.user.firstName,
       ideas,

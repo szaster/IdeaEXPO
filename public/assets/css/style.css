@@ -1,4 +1,33 @@
 html {
+<<<<<<< HEAD
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 45px;
+  background-color: #c5e8ea;
+}
+/* ********** Nav Bar ************ */
+nav {
+  background-color: transparent !important;
+}
+/* ********** Side Nav ************ */
+
+.sidenav li > a {
+  color: white !important;
+  font-weight: bolder !important;
+}
+
+/* ********** Dashboard ************ */
+.title {
+  font-weight: bolder;
+  font-size: medium;
+}
+.user-name {
+  text-align: center;
+  font-weight: bolder;
+=======
 	position: relative;
 	min-height: 100%;
 }
@@ -86,6 +115,7 @@ nav {
 .icon {
 	align-items: center;
 	margin-left: 80px;
+>>>>>>> master
 }
 
 /* ---------------------------------------------- */
