@@ -1,0 +1,32 @@
+<h3>Welcome {{name}}!</h3>
+<h5>Here are public business ideas from people all over the World!</h5>
+{{#if ideas}}
+<table>
+    <thead>
+        <tr>
+            <th>Title</th>
+            <th>Date</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#each ideas}}
+        <tr>
+            <td><a href="/ideas/{{id}}">{{title}}</a></td>
+            <td>{{formatDate createdAt "MMMM Do YYYY, h:mm a"}}</td>
+            {{!-- <td><span clas="dash-status">{{status}}</span></td> --}}
+            <td>
+                {{!-- <a href="/ideas/edit/{{id}}" class="btn btn-float">
+                    <i class="fas fa-edit"></i>
+                </a> --}}
+                <a href="/ideas/contact/{{id}}" class="btn waves-effect waves-light">
+                    <i class="material-icons">Chat about it!</i>
+                </a>
+            </td>
+        </tr>
+        {{/each}}
+    </tbody>
+</table>
+{{else}}
+<p>You have not created any business ideas</p>
+{{/if}}
