@@ -1,6 +1,6 @@
 <div class="row">
     <div class="col s12 m8">
-        <h3> {{idea.title}}
+        {{!-- <h3> {{idea.title}} --}}
         </h3>
         <div class="card idea">
             <div class="card-content">
@@ -15,7 +15,7 @@
         <div class="card center-align">
             <div class="card-content">
                 <span class="card-title">{{idea.user.displayName}}</span>
-                <img src="{{idea.user.image}}" class="circle responsive-img img-small">
+                <img src="{{images}}" class="circle responsive-img img-small">
             </div>
             <div class="card-action">
                 <a href="/ideas/user/{{idea.user.id}}">More ideas from {{idea.user.firstName}}</a>
