@@ -1,5 +1,6 @@
 <h1 class="red-text"><i class="far fa-lightbulb"></i>Ideas</h1>
 <div class="row">
+    {{#if ideas}}
     {{#each ideas}}
     <div class="col s12 m4">
         <div class="card">
@@ -7,11 +8,12 @@
             </div>
             <div class="card-content center-align">
                 <h5>{{title}}</h5>
-                <p>{{stripTags (truncate body 100)}}</p>
-                <br>
+                {{!-- <p>{{stripTags (truncate ideas 100)}}</p>
+                <br> --}}
                 <div class="chip">
-                    <img src="{{user.image}}" alt="user image">
-                    <a href="/ideas/user/{{user.id}}">{{user.displayName}}</a>
+                    {{!-- <h4>{{user.image}},{{user.displayName}}</h4> --}}
+                    <img src="{{image}}" alt="user image">
+                    <a href="/user/{{userId}}">{{name}}</a>
                 </div>
             </div>
             <div class="card-action center-align">
@@ -19,7 +21,8 @@
             </div>
         </div>
     </div>
+    {{/each}}
     {{else}}
     <p>No stories to display</p>
-    {{/each}}
+    {{/if}}
 </div>
