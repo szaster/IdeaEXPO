@@ -29,6 +29,8 @@ The user will be able to post, edit, and read business ideas and have the choice
 
 ## Installation
 
+Run npm install
+
 ## Tech Stack
 
 Front-end framework [Bootstrap](https://getbootstrap.com/) to quickly design and customize responsive mobile-first sites.
@@ -53,9 +55,11 @@ Extension for VS code [Prettier - Code formatter](https://marketplace.visualstud
 
 ## Future-Development
 
-The app will let you search blogs/ideas by category for example food industry, fashion, pet-care, travel, etc.…
+The app will let you search ideas by category for example food industry, fashion, pet-care, travel, etc.…
 
 ## Credits
+
+Activity: Sequelize-Passport Example; Burger Restaurant App, YouTube: Traversy Media; Ipenywis, Google Fu, Stack Overflow, Sequelize Documentation, W3Schools,DEV, Pixabay, TAs, Bootcamp Instructor.
 
 ## License
 
