@@ -36,13 +36,68 @@ body {
 	margin-bottom: 45px;
 	background-color: #c5e8ea;
 }
+.btn{
+	border-radius: 15px;
+}
 
-/* ********** Intro ************ */
+/* ---------------------------------------------- */
+/*                    INTRO                    	  */
+/* ---------------------------------------------- */
 .login-with-google {
 	margin-left: 100px;
 }
 
-/* ********** Nav Bar ************ */
+#meet-the-team-btn:hover{
+	background-color: white;
+	color: #000000 !important;
+	border: 1px solid #000000 !important;
+}
+
+.hire-me{
+	margin: 10px;
+	height: 40px !important;
+	border-radius: 15px;
+	border: 1px solid thistle !important;
+	color: white !important; 
+}
+.social{
+	font-size: large;
+}
+.fa-facebook {
+	color: #3b5998;
+  }
+  
+  .fa-youtube {
+	color: #bb0000;
+  }
+  
+  .fa-google-plus {
+	color: #dd4b39;
+  }
+  
+  .fa-twitter {
+	color: #00aced;
+  }
+  
+  .fa-linkedin {
+	color: #0077b5;
+  }
+  
+  .fa-facebook:hover,
+  .fa-twitter:hover,
+  .fa-google-plus:hover,
+  .fa-youtube:hover,
+  .fa-linkedin:hover {
+	color: thistle;
+  }
+.name-title{
+	text-align: center;
+	font-size: 60px;
+}
+
+/* ---------------------------------------------- */
+/*                    NAV BAR                     */
+/* ---------------------------------------------- */
 nav {
 	height: 100px;
 	background-color: #00897b !important;
@@ -52,14 +107,19 @@ nav {
 	margin-left: 80px;
 >>>>>>> master
 }
-/* ********** Side Nav ************ */
+
+/* ---------------------------------------------- */
+/*                    SIDE NAV                     */
+/* ---------------------------------------------- */
 
 .sidenav li > a {
 	color: white !important;
 	font-weight: bolder !important;
 }
 
-/* ********** Dashboard ************ */
+/* ---------------------------------------------- */
+/*                    DASHBOARD                     */
+/* ---------------------------------------------- */
 .title {
 	font-weight: bolder;
 	font-size: medium;
@@ -69,46 +129,13 @@ nav {
 	font-weight: bolder;
 }
 
-/* ********** Add Idea ************ */
+/* ---------------------------------------------- */
+/*                    ADD IDEA                     */
+/* ---------------------------------------------- */
 .add-idea {
 	font-weight: bolder;
 }
-footer {
-<<<<<<< HEAD
-  position: absolute;
-  bottom: 0;
-  /* height: 20px; */
-  text-align: center;
-  width: 100%;
-  background-color: #c5e8ea;
-  border-top: 1px solid #042f65;
-}
-.fa-small {
-  font-size: 16px !important;
-}
 
-.btn-float {
-  float: left;
-  margin-right: 10px;
-}
-
-.img-small {
-  width: 180px;
-}
-
-footer small {
-  /* line-height: 40px; */
-  color: #042f65;
-  font-size: 5px;
-=======
-	position: absolute;
-	bottom: 0;
-	/* height: 20px; */
-	text-align: center;
-	width: 100%;
-	background-color: #c5e8ea;
-	border-top: 1px solid #042f65;
-}
 .fa-small {
 	font-size: 16px !important;
 }
@@ -122,9 +149,20 @@ footer small {
 	width: 180px;
 }
 
-footer small {
-	/* line-height: 40px; */
-	color: #042f65;
-	font-size: 5px;
->>>>>>> master
+/* ---------------------------------------------- */
+/*                    FOOTER                      */
+/* ---------------------------------------------- */
+
+footer {
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	color: white;
+	text-align: center;
+	padding-bottom: 10px;
+	background-color: #000000;
+	padding-top: 10px;
+	font-size: 12px;
+	align-items: center;
 }
