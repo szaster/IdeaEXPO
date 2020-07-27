@@ -1,4 +1,33 @@
 html {
+<<<<<<< HEAD
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 45px;
+  background-color: #c5e8ea;
+}
+/* ********** Nav Bar ************ */
+nav {
+  background-color: transparent !important;
+}
+/* ********** Side Nav ************ */
+
+.sidenav li > a {
+  color: white !important;
+  font-weight: bolder !important;
+}
+
+/* ********** Dashboard ************ */
+.title {
+  font-weight: bolder;
+  font-size: medium;
+}
+.user-name {
+  text-align: center;
+  font-weight: bolder;
+=======
 	position: relative;
 	min-height: 100%;
 }
@@ -18,21 +47,31 @@ body {
 	margin-left: 100px;
 }
 
+.card {
+	max-width: 20% !important;
+	min-width: 20% !important;
+	height: 400px;
+	float: left;
+	margin: 10px;
+	margin-bottom: 70px;
+	text-align: center;
+}
+.card-content{
+    text-align: center;
+    font-weight: bold;
+    }
+
 #meet-the-team-btn:hover{
 	background-color: white;
 	color: #000000 !important;
 	border: 1px solid #000000 !important;
 }
 
-.hire-me{
-	margin: 10px;
-	height: 40px !important;
-	border-radius: 15px;
-	border: 1px solid thistle !important;
-	color: white !important; 
-}
 .social{
 	font-size: large;
+	margin: 5px;
+	margin-top: 5px;
+	font-weight: bold;
 }
 .fa-facebook {
 	color: #3b5998;
@@ -76,6 +115,7 @@ nav {
 .icon {
 	align-items: center;
 	margin-left: 80px;
+>>>>>>> master
 }
 
 /* ---------------------------------------------- */

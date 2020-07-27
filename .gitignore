@@ -85,7 +85,7 @@ typings/
 dist
 
 .env
-config/config.json
+
 
 # Gatsby files
 .cache/
