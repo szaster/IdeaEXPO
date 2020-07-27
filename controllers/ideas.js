@@ -52,7 +52,8 @@ router.get("/", ensureAuth, async (req, res) => {
 // @route GET /ideas/id
 router.get("/:id", ensureAuth, async (req, res) => {
   try {
-    let idea = await db.idea.findByPk(req.params.id, {
+    let idea = await db.idea.findOne({
+      where: { id: req.params.id },
       include: ["user"],
       raw: true,
     });
