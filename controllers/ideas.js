@@ -44,13 +44,14 @@ router.get("/", ensureAuth, async (req, res) => {
         title: idea.title,
         id: idea.id,
         userId: idea.userId,
+        id: idea.id,
         name: idea["user.firstName"] + " " + idea["user.lastName"],
         image: idea["user.image"],
       };
     });
 
     // data is an object conforming to format used by handlebars public page:
-    // 1. Constains array called ideas
+    // 1. Contains array called ideas
     // 2. Each element of array has name, id, userId, image, and title.
     const data = { ideas: hbIdeas };
 
@@ -171,12 +172,12 @@ router.get("/user/:userId", ensureAuth, async (req, res) => {
       include: ["user"],
       raw: true,
     });
-
     const hbIdeas = ideas.map((idea) => {
       return {
         title: idea.title,
         id: idea.id,
         userId: idea.userId,
+        id: idea.id,
         name: idea["user.firstName"] + " " + idea["user.lastName"],
         image: idea["user.image"],
       };
