@@ -1,5 +1,4 @@
 html {
-<<<<<<< HEAD
   position: relative;
   min-height: 100%;
 }
@@ -27,95 +26,6 @@ nav {
 .user-name {
   text-align: center;
   font-weight: bolder;
-=======
-	position: relative;
-	min-height: 100%;
-}
-
-body {
-	margin-bottom: 45px;
-	background-color: #c5e8ea;
-}
-.btn{
-	border-radius: 15px;
-}
-
-/* ---------------------------------------------- */
-/*                    INTRO                    	  */
-/* ---------------------------------------------- */
-.login-with-google {
-	margin-left: 100px;
-}
-
-.card {
-	max-width: 20% !important;
-	min-width: 20% !important;
-	height: 400px;
-	float: left;
-	margin: 10px;
-	margin-bottom: 70px;
-	text-align: center;
-}
-.card-content{
-    text-align: center;
-    font-weight: bold;
-    }
-
-#meet-the-team-btn:hover{
-	background-color: white;
-	color: #000000 !important;
-	border: 1px solid #000000 !important;
-}
-
-.social{
-	font-size: large;
-	margin: 5px;
-	margin-top: 5px;
-	font-weight: bold;
-}
-.fa-facebook {
-	color: #3b5998;
-  }
-  
-  .fa-youtube {
-	color: #bb0000;
-  }
-  
-  .fa-google-plus {
-	color: #dd4b39;
-  }
-  
-  .fa-twitter {
-	color: #00aced;
-  }
-  
-  .fa-linkedin {
-	color: #0077b5;
-  }
-  
-  .fa-facebook:hover,
-  .fa-twitter:hover,
-  .fa-google-plus:hover,
-  .fa-youtube:hover,
-  .fa-linkedin:hover {
-	color: thistle;
-  }
-.name-title{
-	text-align: center;
-	font-size: 60px;
-}
-
-/* ---------------------------------------------- */
-/*                    NAV BAR                     */
-/* ---------------------------------------------- */
-nav {
-	height: 100px;
-	background-color: #00897b !important;
-}
-.icon {
-	align-items: center;
-	margin-left: 80px;
->>>>>>> master
 }
 
 /* ---------------------------------------------- */
