@@ -26,48 +26,9 @@ html {
   margin-top: 5px;
   font-weight: bold;
 }
-.fa-facebook {
-  color: #3b5998;
-}
-
-.fa-youtube {
-  color: #bb0000;
-}
-
-.fa-google-plus {
-  color: #dd4b39;
-}
-
-.fa-twitter {
-  color: #00aced;
-}
-
-.fa-linkedin {
-  color: #0077b5;
-}
-
-.fa-facebook:hover,
-.fa-twitter:hover,
-.fa-google-plus:hover,
-.fa-youtube:hover,
-.fa-linkedin:hover {
-  color: thistle;
-}
-.name-title {
+.user-name {
   text-align: center;
-  font-size: 60px;
-}
-
-/* ---------------------------------------------- */
-/*                    NAV BAR                     */
-/* ---------------------------------------------- */
-nav {
-  height: 100px;
-  background-color: #00897b !important;
-}
-.icon {
-  align-items: center;
-  margin-left: 80px;
+  font-weight: bolder;
 }
 
 /* ---------------------------------------------- */
