@@ -182,17 +182,6 @@ router.get("/user/:userId", ensureAuth, async (req, res) => {
         image: idea["user.image"],
       };
     });
-    const data = { ideas: hbIdeas };
-
-    const hbIdeas = ideas.map((idea) => {
-      return {
-        title: idea.title,
-        id: idea.id,
-        userId: idea.userId,
-        name: idea["user.firstName"] + " " + idea["user.lastName"],
-        image: idea["user.image"],
-      };
-    });
 
     const data = { ideas: hbIdeas };
 
