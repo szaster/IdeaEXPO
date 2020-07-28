@@ -14,36 +14,32 @@ html {
   font-weight: bold;
 }
 
-.team-card{
-  background-color: transparent;
-}
-
-#meet-the-team-btn:hover {
-  background-color: white;
-  color: #000000 !important;
-  border: 1px solid #000000 !important;
-}
-
-.social {
-  font-size: large;
-  margin: 5px;
-  margin-top: 5px;
-  font-weight: bold;
-}
-.user-name {
-  text-align: center;
+.userName {
   font-weight: bolder;
+  text-align: left;
 }
 
 /* ---------------------------------------------- */
-/*                    SIDE NAV                     */
+/*                    NAV                         */
 /* ---------------------------------------------- */
 
 .sidenav li > a {
   color: white !important;
   font-weight: bolder !important;
 }
-
+nav {
+  height: 100px;
+  margin-bottom: 2rem;
+}
+.idea-icon {
+  margin: auto 20rem;
+}
+.nav-about {
+  height: 4rem;
+}
+.nav-intro {
+  height: 5rem;
+}
 /* ---------------------------------------------- */
 /*                    DASHBOARD                     */
 /* ---------------------------------------------- */
@@ -93,7 +89,12 @@ body {
 .img-small {
   width: 180px;
 }
-
+/* ---------------------------------------------- */
+/*                    Display                     */
+/* ---------------------------------------------- */
+.more-ideas {
+  color: beige;
+}
 /* ---------------------------------------------- */
 /*                    FOOTER                      */
 /* ---------------------------------------------- */
@@ -110,4 +111,56 @@ footer {
   padding-top: 10px;
   font-size: 12px;
   align-items: center;
+}
+
+/* ---------------------------------------------- */
+/*                    ABOUT                       */
+/* ---------------------------------------------- */
+.card-dev {
+  background-color: #c5e8ea;
+  text-align: center;
+  border: lightcoral;
+  border-style: solid;
+  padding: 2rem 2rem;
+  width: 300px;
+  margin-top: 2rem;
+  display: inline-block;
+}
+
+.all-cards {
+  background-color: white;
+}
+.card-title-dev {
+  font-family: "Great Vibes", cursive;
+  font-size: 2rem;
+}
+.team {
+  font-family: "Montserrat", sans-serif;
+  margin-bottom: 1rem;
+}
+.social-media {
+  margin-top: 1rem;
+}
+#meet-the-team-btn:hover {
+  background-color: white;
+  color: #000000 !important;
+  border: 1px solid #000000 !important;
+}
+
+.social {
+  font-size: large;
+  margin: 5px;
+  margin-top: 5px;
+  font-weight: bold;
+}
+.card-app {
+  background-color: #c5e8ea;
+  text-align: center;
+  border: lightcoral;
+  border-style: solid;
+  border-radius: 2rem 2rem;
+  padding: 0rem 1rem;
+  padding-bottom: 2rem;
+  margin-top: 1rem;
+  display: inline-block;
 }

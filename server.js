@@ -1,7 +1,8 @@
 // Requiring necessary npm packages
+require("dotenv").config();
 const express = require("express");
 const session = require("express-session");
-const dotenv = require("dotenv");
+// const dotenv = require("dotenv");
 const path = require("path");
 // Handlebars
 const exphbs = require("express-handlebars");
@@ -19,7 +20,7 @@ const app = express();
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
-app.use(express.static("public"));
+app.use(express.static(path.join(__dirname, "/public")));
 // We need to use sessions to keep track of our user's login status
 app.use(
   session({ secret: "keyboard cat", resave: true, saveUninitialized: true })
@@ -69,6 +70,7 @@ app.engine(
     },
     defaultLayout: "main",
     extname: ".hbs",
+    layoutsDir: path.join(__dirname, "views/layouts"),
   })
 );
 app.set("view engine", ".hbs");
