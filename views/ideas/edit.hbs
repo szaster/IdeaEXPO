@@ -11,11 +11,11 @@
 
         <div class="row">
             <div class="input-field">
-                <select class="custom-select" id="status">
-                    {{#select idea.status}}
+                <select class="custom-select" id="status" name="status">
+                    {{!-- {{#select idea.status}} --}}
                     <option value="public">Public</option>
                     <option value="private">Private</option>
-                    {{/select}}
+                    {{!-- {{/select}} --}}
                 </select>
                 <label for="status">Status</label>
             </div>
