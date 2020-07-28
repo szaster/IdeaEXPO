@@ -26,20 +26,32 @@ html {
   margin-top: 5px;
   font-weight: bold;
 }
-.user-name {
-  text-align: center;
+.userName {
   font-weight: bolder;
+  text-align: left;
 }
 
 /* ---------------------------------------------- */
-/*                    SIDE NAV                     */
+/*                    NAV                         */
 /* ---------------------------------------------- */
 
 .sidenav li > a {
   color: white !important;
   font-weight: bolder !important;
 }
-
+nav {
+  height: 100px;
+  margin-bottom: 2rem;
+}
+.idea-icon {
+  margin: auto 20rem;
+}
+.nav-about {
+  height: 4rem;
+}
+.nav-intro {
+  height: 5rem;
+}
 /* ---------------------------------------------- */
 /*                    DASHBOARD                     */
 /* ---------------------------------------------- */
@@ -89,7 +101,12 @@ body {
 .img-small {
   width: 180px;
 }
-
+/* ---------------------------------------------- */
+/*                    Display                     */
+/* ---------------------------------------------- */
+.more-ideas {
+  color: beige;
+}
 /* ---------------------------------------------- */
 /*                    FOOTER                      */
 /* ---------------------------------------------- */
@@ -124,4 +141,11 @@ footer {
 
 .all-cards {
   background-color: white;
+}
+.card-title-dev {
+  font-family: "Great Vibes", cursive;
+  font-size: 2rem;
+}
+.team {
+  font-family: "Montserrat", sans-serif;
 }
