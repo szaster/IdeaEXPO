@@ -20,6 +20,7 @@ router.post("/", ensureAuth, async (req, res) => {
       title: req.body.title,
       body: req.body.body,
       status: req.body.status,
+      category: req.body.category,
       userId: req.body.user,
     });
     res.redirect("/dashboard");

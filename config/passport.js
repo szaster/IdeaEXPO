@@ -21,7 +21,7 @@ passport.use(
         lastName: profile.name.familyName,
         image: profile.photos[0].value,
       };
-
+      // console.log("emails", params);
       try {
         let user = await db.user.findOne({
           where: { googleId: profile.id },
