@@ -1,4 +1,4 @@
-// @file desc: Authorizatin middleware and dashboard ideas file
+// @file description: Authorizatin middleware and dashboard ideas file
 // Requiring path to so we can use relative routes to our HTML files
 const express = require("express");
 const router = express.Router();
