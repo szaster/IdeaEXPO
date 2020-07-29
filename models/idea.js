@@ -19,6 +19,23 @@ module.exports = function (sequelize, DataTypes) {
       defaultValue: "public",
       enum: ["public", "private"],
     },
+    category: {
+      type: DataTypes.STRING,
+      allowNull: false,
+      defaultValue: "general",
+      enum: [
+        "general",
+        "education",
+        // "information",
+        // "travel and recreation",
+        // "medical",
+        // "business and service",
+        // "nutrition",
+        // "sport and fitness",
+        // "pets and petcare",
+        "art",
+      ],
+    },
   });
 
   Idea.associate = function (models) {
