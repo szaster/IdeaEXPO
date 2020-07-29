@@ -1,106 +1,106 @@
 html {
   position: relative;
   min-height: 100%;
-  }
-  .container{
+}
+.container {
   width: 90% !important;
-  }
-  /* ---------------------------------------------- */
-  /* INTRO */
-  /* ---------------------------------------------- */
-  .login-with-google {
+}
+/* ---------------------------------------------- */
+/* INTRO */
+/* ---------------------------------------------- */
+.login-with-google {
   margin-left: 100px;
-  }
-  .card-content {
+}
+.card-content {
   text-align: center;
   font-weight: bold;
-  }
-  .userName {
+}
+.userName {
   font-weight: bolder;
   text-align: left;
-  }
-  /* ---------------------------------------------- */
-  /* NAV */
-  /* ---------------------------------------------- */
-  .sidenav li > a {
+}
+/* ---------------------------------------------- */
+/* NAV */
+/* ---------------------------------------------- */
+.sidenav li > a {
   color: white !important;
   font-weight: bolder !important;
-  }
-  .menu-btn{
+}
+.menu-btn {
   display: block !important;
   position: relative !important;
-  }
-  nav {
+}
+nav {
   height: 100px;
   margin-bottom: 2rem;
-  }
-  .idea-icon {
+}
+.idea-icon {
   display: inline;
   position: relative;
   align-items: center;
   padding-left: 10%;
-  }
-  .nav-about {
+}
+.nav-about {
   height: 4rem;
-  }
-  .nav-intro {
+}
+.nav-intro {
   height: 5rem;
-  }
-  /* ---------------------------------------------- */
-  /* DASHBOARD */
-  /* ---------------------------------------------- */
-  .title {
+}
+/* ---------------------------------------------- */
+/* DASHBOARD */
+/* ---------------------------------------------- */
+.title {
   font-weight: bolder;
   font-size: medium;
-  }
-  .edit-delete{
+}
+.edit-delete {
   min-width: 210px !important;
   text-align: center;
   /* padding: 5px; */
-  }
-  .user-name {
+}
+.user-name {
   text-align: center;
   font-weight: bolder;
-  }
-  .user-name {
+}
+.user-name {
   text-align: center;
   font-weight: bolder;
   position: relative;
   min-height: 100%;
-  }
-  body {
+}
+body {
   margin-bottom: 45px;
   background-color: #c5e8ea;
-  }
-  .btn {
+}
+.btn {
   border-radius: 15px;
-  }
-  /* ---------------------------------------------- */
-  /* ADD IDEA */
-  /* ---------------------------------------------- */
-  .add-idea {
+}
+/* ---------------------------------------------- */
+/* ADD IDEA */
+/* ---------------------------------------------- */
+.add-idea {
   font-weight: bolder;
-  }
-  .fa-small {
+}
+.fa-small {
   font-size: 16px !important;
-  }
-  .btn-float {
+}
+.btn-float {
   float: left;
   margin-right: 10px;
-  }
-  .img-small {
+}
+.img-small {
   width: 180px;
-  }
-  /* ---------------------------------------------- */
-  /* Display */
-  /* ---------------------------------------------- */
-  .more-ideas {
+}
+/* ---------------------------------------------- */
+/* Display */
+/* ---------------------------------------------- */
+.more-ideas {
   color: beige;
-  }
-  /* ---------------------------------------------- */
-  /* FOOTER */
-  /* ---------------------------------------------- */
-  footer {
+}
+/* ---------------------------------------------- */
+/* FOOTER */
+/* ---------------------------------------------- */
+footer {
   position: fixed;
   left: 0;
   bottom: 0;
@@ -112,11 +112,11 @@ html {
   padding-top: 10px;
   font-size: 12px;
   align-items: center;
-  }
-  /* ---------------------------------------------- */
-  /* ABOUT */
-  /* ---------------------------------------------- */
-  .card-dev {
+}
+/* ---------------------------------------------- */
+/* ABOUT */
+/* ---------------------------------------------- */
+.card-dev {
   background-color: #c5e8ea;
   text-align: center;
   border: lightcoral;
@@ -125,33 +125,33 @@ html {
   width: 300px;
   margin-top: 2rem;
   display: inline-block;
-  }
-  .all-cards {
+}
+.all-cards {
   background-color: white;
-  }
-  .card-title-dev {
+}
+.card-title-dev {
   font-family: "Great Vibes", cursive;
   font-size: 2rem;
-  }
-  .team {
+}
+.team {
   font-family: "Montserrat", sans-serif;
   margin-bottom: 1rem;
-  }
-  .social-media {
+}
+.social-media {
   margin-top: 1rem;
-  }
-  #meet-the-team-btn:hover {
+}
+#meet-the-team-btn:hover {
   background-color: white;
   color: #000000 !important;
   border: 1px solid #000000 !important;
-  }
-  .social {
+}
+.social {
   font-size: large;
   margin: 5px;
   margin-top: 5px;
   font-weight: bold;
-  }
-  .card-app {
+}
+.card-app {
   background-color: #c5e8ea;
   text-align: center;
   border: lightcoral;
@@ -161,4 +161,7 @@ html {
   padding-bottom: 2rem;
   margin-top: 1rem;
   display: inline-block;
-  }
+}
+.about-text {
+  padding: 1rem;
+}
