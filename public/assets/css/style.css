@@ -19,6 +19,10 @@ html {
 	font-weight: bolder;
 	text-align: left;
 }
+.card-intro {
+  margin-top: 2rem;
+  background-color: white;
+}
 /* ---------------------------------------------- */
 /* NAV */
 /* ---------------------------------------------- */
@@ -44,7 +48,7 @@ nav {
 	height: 4rem;
 }
 .nav-intro {
-	height: 5rem;
+  height: 4.5rem;
 }
 /* ---------------------------------------------- */
 /* DASHBOARD */
@@ -100,18 +104,19 @@ body {
 /* FOOTER */
 /* ---------------------------------------------- */
 footer {
-	position: fixed;
-	left: 0;
-	bottom: 0;
-	width: 100%;
-	color: white;
-	text-align: center;
-	padding-bottom: 10px;
-	background-color: #000000;
-	padding-top: 10px;
-	font-size: 12px;
-	align-items: center;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  color: white;
+  text-align: center;
+  padding-bottom: 10px;
+  background-color: #4e4e4e;
+  padding-top: 10px;
+  font-size: 12px;
+  align-items: center;
 }
+
 /* ---------------------------------------------- */
 /* ABOUT */
 /* ---------------------------------------------- */
@@ -160,4 +165,9 @@ footer {
 	padding-bottom: 2rem;
 	margin-top: 1rem;
 	display: inline-block;
+}
+.about-text {
+  padding-top: 2rem;
+}
+@media all and (max-width: 1036px) and (min-width: 500px) {
 }

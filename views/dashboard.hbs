@@ -7,6 +7,7 @@
             <th>Title</th>
             <th>Date</th>
             <th>Status</th>
+            <th>Category</th>
         </tr>
     </thead>
     <tbody>
@@ -15,12 +16,11 @@
             <td><a class="title" href="/ideas/{{id}}">{{title}}</a></td>
             <td>{{formatDate createdAt "MMMM Do YYYY, h:mm:ss a"}}</td>
             <td><span class="dash-status">{{status}}</span></td>
+            <td><span class="dash-category">{{category}}</span></td>
             <td>
-                <div class="edit-delete">
-                    <a href="/ideas/edit/{{id}}" class="teal darken-1 btn btn-float">
-                        Edit <i class="far fa-edit"></i>
-                    </a>
-                </div>
+                <a href="/ideas/edit/{{id}}" class="teal darken-1 btn btn-float">
+                    Edit <i class="far fa-edit"></i>
+                </a>
                 <form action="/ideas/{{id}}" method="POST" id="delete-form">
                     <input type="hidden" name="method" value="DELETE">
                     <button type="submit" class="btn red">

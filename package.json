@@ -1,5 +1,5 @@
 {
-  "name": "ideaexpo",
+  "name": "mysql-sequelize-heroku",
   "version": "1.0.0",
   "description": "## Live Site",
   "main": "server.js",
