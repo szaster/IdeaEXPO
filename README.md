@@ -1,6 +1,7 @@
 # IdeaEXPO
 
 ## Live Site
+
 http://ideaexpo.herokuapp.com/ideas
 
 ## Description
@@ -41,6 +42,8 @@ Run the application with a command npm start in a terminal.
 ## Tech Stack
 
 Front-end framework [Materialzie](https://materializecss.com/) modern responsive front-end framework based on Material Design to quickly design and customize responsive sites.
+
+CKEditor - smart editor [CKEditor](https://ckeditor.com/) is targeted at end users and offers great features to enhance overall editing experience. The editor allows to insert images, tables, spreadsheets, mathematical formulas, media embeds (insert videos, tweets, Instagram posts and more), widgets, code snippets, and offers a veriety of options for styling and formatting documents.
 
 Passport strategy [passport-google-oauth20](http://www.passportjs.org/packages/passport-google-oauth20/) for authenticating with Google using the OAuth 2.0 API. This module lets you authenticate using Google in your Node.js applications. By plugging into Passport, Google authentication can be easily and unobtrusively integrated into any application or framework that supports Connect-style middleware, including Express.
 

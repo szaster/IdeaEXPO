@@ -1,4 +1,5 @@
-CREATE DATABASE IF NOT EXISTS ideas_db;
+CREATE DATABASE
+IF NOT EXISTS ideas_db;
 
 drop database ideas_db;
 
@@ -8,5 +9,7 @@ truncate table users;
 
 
 
-SELECT * from users;
-SELECT * from stories
+SELECT *
+from Users;
+SELECT *
+from Stories
