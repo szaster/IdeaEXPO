@@ -21,7 +21,7 @@ router.get("/", ensureUser, (req, res) => {
 });
 
 //  About/About Me page
-//  GET/
+//  GET/views/about
 router.get("/views/about", ensureUser, (req, res) => {
   res.render("about", { layout: "about" });
 });
