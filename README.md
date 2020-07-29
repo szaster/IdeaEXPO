@@ -12,6 +12,8 @@ As a web dev camp graduate who needs an additional coding experience and a brill
 
 ## GIF/Image
 
+![site image](./public/assets/img/introimg.JPG)
+
 ## Table of Contents
 
 - [IdeaEXPO](#ideaexpo)
@@ -52,10 +54,10 @@ Handlebars.js extension [Handlebars](https://www.npmjs.com/package/handlebars) t
 Extension for VS code [Prettier - Code formatter](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode) to autoformat the code when saving.
 
 ## Usage
+
 Use the app deployed to Heroku, and/or clone the code on your machine and install and import dependencies with npm install.
 
 Run the application with a command npm start in a terminal.
-
 
 ## Collaborators
 
@@ -82,7 +84,7 @@ No tests
 
 ## Questions
 
-If you have any questions you can reach us by clicking below. 
+If you have any questions you can reach us by clicking below.
 
 - [Carina](https://github.com/Creyes17e)
 - [Paschal](https://github.com/paschalihenacho)
