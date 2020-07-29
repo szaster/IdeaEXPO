@@ -1,181 +1,187 @@
 html {
-  position: relative;
-  min-height: 100%;
+	position: relative;
+	min-height: 100%;
 }
 .container {
-  width: 90% !important;
+	width: 90% !important;
 }
 /* ---------------------------------------------- */
 /* INTRO */
 /* ---------------------------------------------- */
 .login-with-google {
-  margin-left: 100px;
+	margin-left: 100px;
 }
 .card-content {
-  text-align: center;
-  font-weight: bold;
+	text-align: center;
+	font-weight: bold;
 }
 .userName {
-  font-weight: bolder;
-  text-align: left;
+	font-weight: bolder;
+	text-align: left;
 }
 /* ---------------------------------------------- */
 /* NAV */
 /* ---------------------------------------------- */
 .sidenav li > a {
-  color: white !important;
-  font-weight: bolder !important;
+	color: white !important;
+	font-weight: bolder !important;
 }
 .menu-btn {
-  display: block !important;
-  position: relative !important;
+	display: block !important;
+	position: relative !important;
 }
 nav {
-  height: 100px;
-  margin-bottom: 2rem;
+	height: 100px;
+	margin-bottom: 2rem;
 }
 .idea-icon {
-  display: inline;
-  position: relative;
-  align-items: center;
-  padding-left: 10%;
+	display: inline;
+	position: relative;
+	align-items: center;
+	padding-left: 10%;
 }
 .nav-about {
-  height: 4rem;
+	height: 4rem;
 }
 .nav-intro {
-  height: 5rem;
+	height: 5rem;
 }
 /* ---------------------------------------------- */
 /* DASHBOARD */
 /* ---------------------------------------------- */
 .title {
-  font-weight: bolder;
-  font-size: medium;
+	font-weight: bolder;
+	font-size: medium;
 }
 .edit-delete {
-  min-width: 210px !important;
-  text-align: center;
-  /* padding: 5px; */
+	min-width: 210px !important;
+	text-align: center;
+	/* padding: 5px; */
 }
 .user-name {
-  text-align: center;
-  font-weight: bolder;
+	text-align: center;
+	font-weight: bolder;
 }
 .user-name {
-  text-align: center;
-  font-weight: bolder;
-  position: relative;
-  min-height: 100%;
+	text-align: center;
+	font-weight: bolder;
+	position: relative;
+	min-height: 100%;
 }
 body {
-  margin-bottom: 45px;
-  background-color: #c5e8ea;
+	margin-bottom: 45px;
+	background-color: #c5e8ea;
 }
 .btn {
-  border-radius: 15px;
+	border-radius: 15px;
+}
+.card {
+	border: lightcoral !important;
+	border-style: solid !important;
 }
 /* ---------------------------------------------- */
 /* ADD IDEA */
 /* ---------------------------------------------- */
-.add-idea, .edit-idea, .public-idea {
-  font-weight: bolder;
-  }
+.add-idea,
+.edit-idea,
+.public-idea {
+	font-weight: bolder;
+}
 .fa-small {
-  font-size: 16px !important;
+	font-size: 16px !important;
 }
 .btn-float {
-  float: left;
-  margin-right: 10px;
+	float: left;
+	margin-right: 10px;
 }
 .img-small {
-  width: 180px;
+	width: 180px;
 }
 /* ---------------------------------------------- */
 /* Display */
 /* ---------------------------------------------- */
 .more-ideas {
-  color: beige;
+	color: beige;
 }
 /* ---------------------------------------------- */
 /* FOOTER */
 /* ---------------------------------------------- */
 footer {
-  position: fixed;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  color: white;
-  text-align: center;
-  padding-bottom: 10px;
-  background-color: #000000;
-  padding-top: 10px;
-  font-size: 12px;
-  align-items: center;
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	color: white;
+	text-align: center;
+	padding-bottom: 10px;
+	background-color: #000000;
+	padding-top: 10px;
+	font-size: 12px;
+	align-items: center;
 }
 /* ---------------------------------------------- */
 /* ABOUT */
 /* ---------------------------------------------- */
 .card-dev {
-  background-color: #c5e8ea;
-  text-align: center;
-  border: lightcoral;
-  border-style: solid;
-  padding: 2rem 2rem;
-  width: 300px;
-  margin-top: 2rem;
-  display: inline-block;
+	background-color: #c5e8ea;
+	text-align: center;
+	border: lightcoral;
+	border-style: solid;
+	padding: 2rem 2rem;
+	width: 300px;
+	margin-top: 2rem;
+	display: inline-block;
 }
 .all-cards {
-  background-color: white;
+	background-color: white;
 }
 .card-title-dev {
-  font-family: "Great Vibes", cursive;
-  font-size: 2rem;
+	font-family: "Great Vibes", cursive;
+	font-size: 2rem;
 }
 .team {
-  font-family: "Montserrat", sans-serif;
-  margin-bottom: 1rem;
+	font-family: "Montserrat", sans-serif;
+	margin-bottom: 1rem;
 }
 .social-media {
-  margin-top: 1rem;
+	margin-top: 1rem;
 }
 
-.fa-github{
-color: #000000;
+.fa-github {
+	color: #000000;
 }
 
 .fa-github:hover {
-  color: white;
-  background-color: #039be5;
+	color: white;
+	background-color: #039be5;
 }
 .fa-linkedin:hover {
-  color: white;
-  background-color: #039be5;
+	color: white;
+	background-color: #039be5;
 }
 
 #meet-the-team-btn:hover {
-  background-color: white;
-  color: #000000 !important;
-  border: 1px solid #000000 !important;
+	background-color: white;
+	color: #000000 !important;
+	border: 1px solid #000000 !important;
 }
 .social {
-  font-size: large;
-  margin: 5px;
-  margin-top: 5px;
-  font-weight: bold;
+	font-size: large;
+	margin: 5px;
+	margin-top: 5px;
+	font-weight: bold;
 }
 .card-app {
-  background-color: #c5e8ea;
-  text-align: center;
-  border: lightcoral;
-  border-style: solid;
-  border-radius: 2rem 2rem;
-  padding: 0rem 1rem;
-  padding-bottom: 2rem;
-  margin-top: 1rem;
-  display: inline-block;
+	background-color: #c5e8ea;
+	text-align: center;
+	border: lightcoral;
+	border-style: solid;
+	border-radius: 2rem 2rem;
+	padding: 0rem 1rem;
+	padding-bottom: 2rem;
+	margin-top: 1rem;
+	display: inline-block;
 }
 .about-text {
-  padding: 1rem;
+	padding: 1rem;
 }
