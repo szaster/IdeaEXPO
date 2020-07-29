@@ -78,9 +78,9 @@ body {
 /* ---------------------------------------------- */
 /* ADD IDEA */
 /* ---------------------------------------------- */
-.add-idea {
+.add-idea, .edit-idea, .public-idea {
   font-weight: bolder;
-}
+  }
 .fa-small {
   font-size: 16px !important;
 }
