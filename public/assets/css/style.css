@@ -1,108 +1,106 @@
 html {
   position: relative;
   min-height: 100%;
-}
-
-/* ---------------------------------------------- */
-/*                    INTRO                    	  */
-/* ---------------------------------------------- */
-.login-with-google {
+  }
+  .container{
+  width: 90% !important;
+  }
+  /* ---------------------------------------------- */
+  /* INTRO */
+  /* ---------------------------------------------- */
+  .login-with-google {
   margin-left: 100px;
-}
-.card-content {
+  }
+  .card-content {
   text-align: center;
   font-weight: bold;
-}
-
-.userName {
+  }
+  .userName {
   font-weight: bolder;
   text-align: left;
-}
-.card-intro {
-  margin-top: 2rem;
-  background-color: white;
-}
-/* ---------------------------------------------- */
-/*                    NAV                         */
-/* ---------------------------------------------- */
-
-.sidenav li > a {
+  }
+  /* ---------------------------------------------- */
+  /* NAV */
+  /* ---------------------------------------------- */
+  .sidenav li > a {
   color: white !important;
   font-weight: bolder !important;
-}
-nav {
+  }
+  .menu-btn{
+  display: block !important;
+  position: relative !important;
+  }
+  nav {
   height: 100px;
   margin-bottom: 2rem;
-}
-.idea-icon {
-  margin: auto 20rem;
-}
-.nav-about {
+  }
+  .idea-icon {
+  display: inline;
+  position: relative;
+  align-items: center;
+  padding-left: 10%;
+  }
+  .nav-about {
   height: 4rem;
-}
-.nav-intro {
-  height: 4.5rem;
-}
-/* ---------------------------------------------- */
-/*                    DASHBOARD                     */
-/* ---------------------------------------------- */
-.title {
+  }
+  .nav-intro {
+  height: 5rem;
+  }
+  /* ---------------------------------------------- */
+  /* DASHBOARD */
+  /* ---------------------------------------------- */
+  .title {
   font-weight: bolder;
   font-size: medium;
-}
-.user-name {
+  }
+  .edit-delete{
+  min-width: 210px !important;
+  text-align: center;
+  /* padding: 5px; */
+  }
+  .user-name {
   text-align: center;
   font-weight: bolder;
-}
-.title {
-  font-weight: bolder;
-  font-size: medium;
-}
-.user-name {
+  }
+  .user-name {
   text-align: center;
   font-weight: bolder;
   position: relative;
   min-height: 100%;
-}
-
-body {
+  }
+  body {
   margin-bottom: 45px;
   background-color: #c5e8ea;
-}
-.btn {
+  }
+  .btn {
   border-radius: 15px;
-}
-
-/* ---------------------------------------------- */
-/*                    ADD IDEA                     */
-/* ---------------------------------------------- */
-.add-idea {
+  }
+  /* ---------------------------------------------- */
+  /* ADD IDEA */
+  /* ---------------------------------------------- */
+  .add-idea {
   font-weight: bolder;
-}
-
-.fa-small {
+  }
+  .fa-small {
   font-size: 16px !important;
-}
-
-.btn-float {
+  }
+  .btn-float {
   float: left;
   margin-right: 10px;
-}
-
-.img-small {
+  }
+  .img-small {
   width: 180px;
-}
-/* ---------------------------------------------- */
-/*                    Display                     */
-/* ---------------------------------------------- */
-.more-ideas {
+  }
+  /* ---------------------------------------------- */
+  /* Display */
+  /* ---------------------------------------------- */
+  .more-ideas {
   color: beige;
-}
-/* ---------------------------------------------- */
-/*                    FOOTER                      */
-/* ---------------------------------------------- */
-
-footer {
+  }
+  /* ---------------------------------------------- */
+  /* FOOTER */
+  /* ---------------------------------------------- */
+  footer {
   position: fixed;
   left: 0;
   bottom: 0;
@@ -110,16 +108,15 @@ footer {
   color: white;
   text-align: center;
   padding-bottom: 10px;
-  background-color: #4e4e4e;
+  background-color: #000000;
   padding-top: 10px;
   font-size: 12px;
   align-items: center;
-}
-
-/* ---------------------------------------------- */
-/*                    ABOUT                       */
-/* ---------------------------------------------- */
-.card-dev {
+  }
+  /* ---------------------------------------------- */
+  /* ABOUT */
+  /* ---------------------------------------------- */
+  .card-dev {
   background-color: #c5e8ea;
   text-align: center;
   border: lightcoral;
@@ -128,35 +125,33 @@ footer {
   width: 300px;
   margin-top: 2rem;
   display: inline-block;
-}
-
-.all-cards {
+  }
+  .all-cards {
   background-color: white;
-}
-.card-title-dev {
+  }
+  .card-title-dev {
   font-family: "Great Vibes", cursive;
   font-size: 2rem;
-}
-.team {
+  }
+  .team {
   font-family: "Montserrat", sans-serif;
   margin-bottom: 1rem;
-}
-.social-media {
+  }
+  .social-media {
   margin-top: 1rem;
-}
-#meet-the-team-btn:hover {
+  }
+  #meet-the-team-btn:hover {
   background-color: white;
   color: #000000 !important;
   border: 1px solid #000000 !important;
-}
-
-.social {
+  }
+  .social {
   font-size: large;
   margin: 5px;
   margin-top: 5px;
   font-weight: bold;
-}
-.card-app {
+  }
+  .card-app {
   background-color: #c5e8ea;
   text-align: center;
   border: lightcoral;
@@ -166,9 +161,4 @@ footer {
   padding-bottom: 2rem;
   margin-top: 1rem;
   display: inline-block;
-}
-.about-text {
-  padding-top: 2rem;
-}
-@media all and (max-width: 1036px) and (min-width: 500px) {
-}
+  }

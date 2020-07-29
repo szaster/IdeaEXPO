@@ -89,8 +89,6 @@ typings/
 .nuxt
 dist
 
-.env
-
 
 # Gatsby files
 .cache/
