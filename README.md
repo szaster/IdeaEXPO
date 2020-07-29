@@ -1,6 +1,7 @@
 # IdeaEXPO
 
 ## Live Site
+http://ideaexpo.herokuapp.com/ideas
 
 ## Description
 
