@@ -44,6 +44,7 @@ router.get("/", ensureAuth, async (req, res) => {
       return {
         title: idea.title,
         id: idea.id,
+        category: idea.category,
         userId: idea.userId,
         id: idea.id,
         name: idea["user.firstName"] + " " + idea["user.lastName"],
@@ -83,6 +84,7 @@ router.get("/:id", ensureAuth, async (req, res) => {
 
     res.render("ideas/display", {
       title: idea.title,
+      category: idea.category,
       userId: idea.userId,
       name: idea["user.firstName"] + " " + idea["user.lastName"],
       firstName: idea["user.firstName"],
@@ -176,6 +178,7 @@ router.get("/user/:userId", ensureAuth, async (req, res) => {
     const hbIdeas = ideas.map((idea) => {
       return {
         title: idea.title,
+        category: idea.category,
         id: idea.id,
         userId: idea.userId,
         id: idea.id,
