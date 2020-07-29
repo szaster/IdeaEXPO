@@ -4,9 +4,8 @@ drop database ideas_db;
 
 USE ideas_db;
 
-truncate table users;
 
 
 
-SELECT * from users;
-SELECT * from stories
+SELECT * from Users;
+SELECT * from Ideas;

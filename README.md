@@ -1,8 +1,8 @@
 # IdeaEXPO
 
-## Live Site: 
-[IdeaEXPO](http://ideaexpo.herokuapp.com)
+## Live Site:
 
+[IdeaEXPO](http://ideaexpo.herokuapp.com)
 
 ## Description
 
@@ -15,6 +15,9 @@ As a web dev camp graduate who needs an additional coding experience and a brill
 ## GIF/Image
 
 ![site image](./public/assets/img/introimg.JPG)
+![site image](./public/assets/img/dashboardimg.JPG)
+![site image](./public/assets/img/addimg.JPG)
+![site image](./public/assets/img/publicimg.JPG)
 
 ## Table of Contents
 
