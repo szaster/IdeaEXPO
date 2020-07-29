@@ -35,9 +35,9 @@ As a web dev camp graduate who needs an additional coding experience and a brill
 
 ## Installation
 
-Clone the code on your machine and install and import all dependencies with npm install.
+Clone the code on your machine and install and import all dependencies with `npm install`.
 
-Run the application with a command npm start in a terminal.
+Run the application with a command `npm start` in a terminal.
 
 ## Tech Stack
 
@@ -71,12 +71,11 @@ Run the application with a command npm start in a terminal.
 
 ## Future-Development
 
-Incirporate a communication between users by adding feedback such as "Discuss this idea".
-Add emoji pictograms for idea validation.
+Incorporate a communication between users by adding options to give a feedback such as "Discuss this idea", etc. Enhance general app functionality with social interaction features, such as comments, emoji pictograms for ideas validation.
 
 ## Credits
 
-Activity: Sequelize-Passport Example; Burger Restaurant App, YouTube: Traversy Media; Ipenywis, Google Fu, Stack Overflow, Sequelize Documentation, W3Schools,DEV, Pixabay, TAs, Bootcamp Instructor.
+Activity: Sequelize-Passport Example; Burger Restaurant App, YouTube: Traversy Media; Ipenywis, Google Fu, Stack Overflow, Sequelize Documentation, W3Schools, DEV, Pixabay, TAs, Bootcamp Instructor.
 
 ## License
 
