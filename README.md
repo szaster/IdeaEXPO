@@ -8,7 +8,7 @@ As an investor you have a platform where you can choose a business idea from dif
 
 The user will be able to post, edit, and read business ideas and have the choice to make them public or private. Future investors or collaborators will be able to view publics posts and will be able to contact the blogger if they are interested in the business idea or would like to add on to the idea.
 
-As a web dev camp graduate who needs an additional coding experience and a brilliant portfolio, you can find a team willing to collaborate on the applications of your interest with other web dev graduates to sharpen your skills, gain experience and maybe, launch a startup!
+As a web dev camp graduate who needs an additional coding experience and a brilliant portfolio, you can find a team willing to collaborate on the applications of your interest with other web dev graduates to sharpen your skills, gain experience and maybe, launch a startup!!!
 
 ## GIF/Image
 
