@@ -140,6 +140,20 @@ footer {
 .social-media {
   margin-top: 1rem;
 }
+
+.fa-github{
+color: #000000;
+}
+
+.fa-github:hover {
+  color: white;
+  background-color: #039be5;
+}
+.fa-linkedin:hover {
+  color: white;
+  background-color: #039be5;
+}
+
 #meet-the-team-btn:hover {
   background-color: white;
   color: #000000 !important;
