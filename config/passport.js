@@ -1,7 +1,6 @@
 const GoogleStrategy = require("passport-google-oauth2").Strategy;
 const passport = require("passport");
 
-
 const db = require("../models");
 
 require("dotenv").config();
@@ -50,7 +49,6 @@ passport.serializeUser((user, done) => {
 });
 
 passport.deserializeUser((obj, done) => {
-  // user.findById(id, (err, user) => done(err, user));
   done(null, obj);
 });
 
