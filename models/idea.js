@@ -17,13 +17,11 @@ module.exports = function (sequelize, DataTypes) {
       type: DataTypes.STRING,
       allowNull: false,
       defaultValue: "public",
-      enum: ["public", "private"],
     },
     category: {
       type: DataTypes.STRING,
       allowNull: false,
       defaultValue: "general",
-      enum: ["general", "education", "art"],
     },
   });
 

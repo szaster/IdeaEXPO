@@ -8,10 +8,10 @@ const path = require("path");
 const exphbs = require("express-handlebars");
 // Requiring passport as we've configured it
 const passport = require("./config/passport");
-// Setting up port and requiring models for syncing
+// Lets you use HTTP verbs such as PUT or DELETE in places where the client doesn't support it
 const methodOverride = require("method-override");
-const morgan = require("morgan");
 
+// Setting up port and requiring models for syncing
 const PORT = process.env.PORT || 8080;
 const db = require("./models");
 
